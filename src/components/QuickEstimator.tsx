@@ -41,13 +41,21 @@ Please provide an estimated quote and availability.`;
   };
 
   return (
-    <section id="estimator" className="max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-12">
-      
+    <section id="estimator" className="relative max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-12 overflow-hidden">
+      {/* Ambient Construction Sparks (Section Background Field) */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="civil-spark animate-spark-1" style={{ bottom: "5%", left: "8%", width: 6, height: 6 }} />
+        <div className="civil-spark animate-spark-2" style={{ bottom: "18%", left: "25%", width: 5, height: 5 }} />
+        <div className="civil-spark animate-spark-3" style={{ bottom: "12%", left: "55%", width: 7, height: 7 }} />
+        <div className="civil-spark animate-spark-4" style={{ bottom: "8%", left: "78%", width: 4, height: 4 }} />
+        <div className="civil-spark animate-spark-5" style={{ bottom: "25%", left: "92%", width: 6, height: 6 }} />
+      </div>
+
       {/* Rapid Estimator Card */}
-      <div className="rounded-3xl bg-gradient-to-br from-[#0f172a] via-[#0b1120] to-[#070b14] border border-amber-500/40 p-8 md:p-12 shadow-2xl relative overflow-hidden">
+      <div className="rounded-3xl bg-gradient-to-br from-[#0f172a] via-[#0b1120] to-[#070b14] border border-amber-500/40 p-8 md:p-12 shadow-2xl relative overflow-hidden z-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
-        {/* Pattern 4: Ambient Civil Sparks & Glowing Embers */}
+        {/* Ambient Construction Sparks (Inside Estimator Card) */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="civil-spark animate-spark-1" style={{ bottom: "8%", left: "12%", width: 5, height: 5 }} />
           <div className="civil-spark animate-spark-2" style={{ bottom: "14%", left: "34%", width: 6, height: 6 }} />

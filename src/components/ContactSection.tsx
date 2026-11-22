@@ -7,13 +7,15 @@ import { siteConfig } from "@/data/siteData";
 export default function ContactSection() {
   return (
     <section id="contact" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-10 overflow-hidden">
-      {/* Pattern 4: Ambient Civil Sparks & Glowing Embers */}
+      {/* Ambient Construction Sparks & Glowing Embers (Rich Jobsite Glow Field) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <div className="civil-spark animate-spark-1" style={{ bottom: "10%", left: "15%", width: 5, height: 5 }} />
-        <div className="civil-spark animate-spark-2" style={{ bottom: "20%", left: "40%", width: 6, height: 6 }} />
-        <div className="civil-spark animate-spark-3" style={{ bottom: "5%", left: "75%", width: 4, height: 4 }} />
-        <div className="civil-spark animate-spark-4" style={{ bottom: "28%", left: "88%", width: 5, height: 5 }} />
-        <div className="civil-spark animate-spark-5" style={{ bottom: "15%", left: "55%", width: 6, height: 6 }} />
+        <div className="civil-spark animate-spark-1" style={{ bottom: "6%", left: "10%", width: 5, height: 5 }} />
+        <div className="civil-spark animate-spark-2" style={{ bottom: "16%", left: "28%", width: 6, height: 6 }} />
+        <div className="civil-spark animate-spark-3" style={{ bottom: "8%", left: "48%", width: 4, height: 4 }} />
+        <div className="civil-spark animate-spark-4" style={{ bottom: "24%", left: "68%", width: 5, height: 5 }} />
+        <div className="civil-spark animate-spark-5" style={{ bottom: "12%", left: "85%", width: 7, height: 7 }} />
+        <div className="civil-spark animate-spark-2" style={{ bottom: "20%", left: "94%", width: 4, height: 4 }} />
+        <div className="civil-spark animate-spark-3" style={{ bottom: "4%", left: "38%", width: 6, height: 6 }} />
       </div>
 
       <div className="relative z-10 space-y-10">

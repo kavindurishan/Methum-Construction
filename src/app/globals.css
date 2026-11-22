@@ -238,5 +238,35 @@ body {
 .animate-spark-4 { animation: sparkRise 8s infinite linear 0.7s; }
 .animate-spark-5 { animation: sparkRise 6.2s infinite linear 3.2s; }
 
+/* 5. About Section: Huge Kinetic Outline Typography Marquee */
+@keyframes marqueeKineticLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeKineticRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-kinetic-left {
+  animation: marqueeKineticLeft 32s linear infinite;
+}
+
+.animate-kinetic-right {
+  animation: marqueeKineticRight 38s linear infinite;
+}
+
+.text-stroke-amber {
+  -webkit-text-stroke: 1.5px rgba(245, 158, 11, 0.22);
+  color: transparent;
+}
+
+.text-stroke-amber-subtle {
+  -webkit-text-stroke: 1px rgba(245, 158, 11, 0.14);
+  color: transparent;
+}
+
+
 
 

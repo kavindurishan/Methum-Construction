@@ -4,28 +4,24 @@ import { siteConfig } from "@/data/siteData";
 export default function LeadershipAbout() {
   return (
     <section id="about" className="relative max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-12 overflow-hidden">
-      {/* Pattern 3: Topographic Elevation Contours & Road Grading Survey Map */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-40">
-        <svg
-          className="w-[125%] h-[125%] text-amber-500/15 animate-topo-contours"
-          viewBox="0 0 800 500"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.2"
-        >
-          <path d="M50 120 Q 220 30 430 110 T 780 90" />
-          <path d="M30 180 Q 240 80 450 170 T 800 150" />
-          <path d="M40 240 Q 260 140 470 230 T 790 220" />
-          <path d="M20 310 Q 250 200 490 290 T 810 290" />
-          <path d="M60 390 Q 280 280 520 360 T 780 380" />
-          <circle cx="470" cy="230" r="45" strokeDasharray="3,3" />
-          <circle cx="470" cy="230" r="80" strokeDasharray="4,4" />
-        </svg>
-        <div className="absolute inset-0 bg-radial from-transparent via-[#070b14]/70 to-[#070b14]" />
-        <div className="absolute bottom-6 left-10 text-[9px] font-mono text-amber-500/25 tracking-widest hidden md:block">
-          SURVEY DATUM: MSL • CONTOUR ELEV: +184.25m
+      {/* Huge Kinetic Outline Typography Marquee in Background */}
+      <div className="absolute inset-0 z-0 flex flex-col justify-around overflow-hidden pointer-events-none select-none opacity-30">
+        {/* Row 1: Leftward drifting kinetic text */}
+        <div className="whitespace-nowrap flex animate-kinetic-left text-6xl sm:text-7xl lg:text-8xl font-black font-mono tracking-widest text-stroke-amber">
+          <span className="shrink-0">METHUM CONSTRUCTION • CIVIL ENGINEERING • ROAD CONTRACTING •&nbsp;</span>
+          <span className="shrink-0">METHUM CONSTRUCTION • CIVIL ENGINEERING • ROAD CONTRACTING •&nbsp;</span>
+        </div>
+
+        {/* Row 2: Rightward drifting kinetic text */}
+        <div className="whitespace-nowrap flex animate-kinetic-right text-6xl sm:text-7xl lg:text-8xl font-black font-mono tracking-widest text-stroke-amber-subtle">
+          <span className="shrink-0">10+ YEARS FIELD EXPERIENCE • CIDA GRADE C7 • BADALKUMBURA SRI LANKA •&nbsp;</span>
+          <span className="shrink-0">10+ YEARS FIELD EXPERIENCE • CIDA GRADE C7 • BADALKUMBURA SRI LANKA •&nbsp;</span>
         </div>
       </div>
+
+      {/* Edge Gradient Masks so text smoothly dissolves at borders */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#070b14] via-transparent to-[#070b14] pointer-events-none" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#070b14] via-transparent to-[#070b14] pointer-events-none" />
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
