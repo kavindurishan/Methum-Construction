@@ -24,7 +24,7 @@ export default function LandmarkProjects() {
           <div className="relative min-h-[360px] lg:min-h-[480px]">
             <img
               src="/showcase.jpg"
-              alt="Methum Constructions Civil Infrastructure"
+              alt="Methum Construction Civil Infrastructure"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-transparent via-[#0f172a]/60 to-[#0f172a]"></div>
@@ -42,7 +42,7 @@ export default function LandmarkProjects() {
               </h3>
               
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                From high-specification road metalling, asphalt second-coat tarring, and concrete pavements to institutional complexes, structural cladding, and deep drainage works, Methum Constructions delivers civil engineering excellence across the Uva and national corridors.
+                From high-specification road metalling, asphalt second-coat tarring, and concrete pavements to institutional complexes, structural cladding, and deep drainage works, Methum Construction delivers civil engineering excellence across the Uva and national corridors.
               </p>
 
               {/* Technical Specifications Matrix */}

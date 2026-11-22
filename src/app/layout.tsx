@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: `${siteConfig.company.name} | Civil Engineering, Infrastructure & Heavy Equipment`,
   description: `${siteConfig.company.tagline}. High-capacity highways, commercial high-rise buildings, and heavy machinery fleet rental and sales across Sri Lanka.`,
   keywords: [
-    "Methum Constructions",
+    "Methum Construction",
     "Construction Company Sri Lanka",
     "Road Construction Sri Lanka",
     "Asphalt Paving Colombo",

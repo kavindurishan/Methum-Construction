@@ -1,6 +1,6 @@
-# Methum Constructions — Official Enterprise Web Portal
+# Methum Construction — Official Enterprise Web Portal
 
-ශ්‍රී ලංකාවේ **CIDA CS2 / Tier-1 Enterprise (Nawaloka Construction Standard)** ප්‍රමිතියට අනුකූලව නිර්මාණය කරන ලද **Methum Constructions** ආයතනික වෙබ් අඩවිය.
+ශ්‍රී ලංකාවේ **CIDA CS2 / Tier-1 Enterprise (Nawaloka Construction Standard)** ප්‍රමිතියට අනුකූලව නිර්මාණය කරන ලද **Methum Construction** ආයතනික වෙබ් අඩවිය.
 
 ---
 
@@ -41,4 +41,4 @@ npm run dev
 
 ---
 
-© 2026 Methum Constructions (Pvt) Ltd. All Rights Reserved.
+© 2026 Methum Construction. All Rights Reserved.

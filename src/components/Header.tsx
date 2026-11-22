@@ -96,7 +96,7 @@ export default function Header() {
             <div className="relative overflow-hidden rounded-md">
               <img
                 src="/logo.png"
-                alt="Methum Constructions"
+                alt="Methum Construction"
                 className="h-9 sm:h-11 w-auto object-contain transition duration-200 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"
               />
               {/* Metallic Sheen Glare Animation */}

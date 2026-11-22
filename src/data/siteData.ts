@@ -30,8 +30,8 @@ export interface ProjectItem {
 
 export const siteConfig = {
   company: {
-    name: "Methum Constructions",
-    legalName: "Methum Constructions",
+    name: "Methum Construction",
+    legalName: "Methum Construction",
     tagline: "Engineering Excellence & Heavy Plant Solutions",
     establishedYear: "2023",
     experienceYears: "10+",
@@ -69,7 +69,7 @@ export const siteConfig = {
     directorName: "R.M.P. Rathnayaka",
     title: "Founder & Proprietor",
     message:
-      "At Methum Constructions, our core philosophy is grounded in integrity, high-quality civil execution, and dependable machinery support. Backed by more than a decade of hands-on experience in road networks, institutional facilities, and heavy plant operations across the Uva province and beyond, we deliver solid infrastructure that stands the test of time.",
+      "At Methum Construction, our core philosophy is grounded in integrity, high-quality civil execution, and dependable machinery support. Backed by more than a decade of hands-on experience in road networks, institutional facilities, and heavy plant operations across the Uva province and beyond, we deliver solid infrastructure that stands the test of time.",
   },
   divisions: [
     {
@@ -397,7 +397,7 @@ export const siteConfig = {
   ],
   faqs: [
     {
-      q: "How can I hire heavy machinery from Methum Constructions?",
+      q: "How can I hire heavy machinery from Methum Construction?",
       a: "You can click on the 'WhatsApp' button or call our dispatch hotline directly at 0777 26 50 15 / 055 22 50 610. We will confirm machine availability, transport logistics, and provide an instant quotation.",
     },
     {

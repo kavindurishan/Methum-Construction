@@ -60,7 +60,7 @@ export default function SiteIntroLoader() {
         <div className="relative overflow-hidden group">
           <img
             src="/logo-white.png"
-            alt="Methum Constructions"
+            alt="Methum Construction"
             className="h-20 sm:h-28 md:h-32 w-auto object-contain filter drop-shadow-[0_0_30px_rgba(245,158,11,0.5)] transition duration-300"
           />
           {/* Metallic Sheen Glare Sweep */}

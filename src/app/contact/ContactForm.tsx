@@ -23,7 +23,7 @@ export default function ContactForm() {
 
   const handleWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `*New Contact Request - Methum Constructions*
+    const text = `*New Contact Request - Methum Construction*
 ---------------------------------------
 *Name:* ${formData.name || "Client"}
 *Phone:* ${formData.phone || "Not provided"}
@@ -65,7 +65,7 @@ export default function ContactForm() {
             </div>
             <h4 className="text-xl font-bold text-white">Thank You, {formData.name || "Valued Client"}!</h4>
             <p className="text-slate-300 text-xs max-w-md mx-auto leading-relaxed">
-              Your inquiry has been submitted directly to the Methum Constructions estimation desk. We will reach out via phone or email within 24 business hours.
+              Your inquiry has been submitted directly to the Methum Construction estimation desk. We will reach out via phone or email within 24 business hours.
             </p>
             <button
               onClick={() => {

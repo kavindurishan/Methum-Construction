@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="/hero-banner.jpg"
-          alt="Methum Constructions Hero Infrastructure"
+          alt="Methum Construction Hero Infrastructure"
           className="w-full h-full object-cover object-center filter brightness-[0.38] contrast-125"
         />
         {/* Multilayer Gradients for clean text readability */}

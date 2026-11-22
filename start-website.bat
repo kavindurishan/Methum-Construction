@@ -1,7 +1,7 @@
 @echo off
-title Methum Constructions Web Portal
+title Methum Construction Web Portal
 echo ========================================================
-echo   Starting Methum Constructions Corporate Web Server...
+echo   Starting Methum Construction Corporate Web Server...
 echo ========================================================
 echo.
 echo Opening local development server on http://localhost:3000

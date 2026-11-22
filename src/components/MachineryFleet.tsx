@@ -188,7 +188,7 @@ export default function MachineryFleet() {
 
                 <a
                   href={`https://wa.me/${siteConfig.contacts.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(
-                    `Hello Methum Constructions, I am inquiring about the ${machine.name} for ${
+                    `Hello Methum Construction, I am inquiring about the ${machine.name} for ${
                       isSale ? "purchase" : "rental"
                     }. Please share rates and availability.`
                   )}`}

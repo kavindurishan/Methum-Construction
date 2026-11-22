@@ -75,7 +75,7 @@ export default function Footer() {
       content: (
         <div className="space-y-3 text-xs text-slate-300 leading-relaxed">
           <p>
-            Welcome to Methum Constructions. All civil infrastructure contracts,
+            Welcome to Methum Construction. All civil infrastructure contracts,
             road metalling, and turnkey building projects conform to standard
             national conditions:
           </p>
@@ -136,7 +136,7 @@ export default function Footer() {
         <div className="space-y-3 text-xs text-slate-300 leading-relaxed">
           <p>
             Safety and structural durability remain the cornerstone of every
-            Methum Constructions site:
+            Methum Construction site:
           </p>
           <ul className="list-disc pl-5 space-y-1.5 text-slate-400">
             <li>
@@ -164,7 +164,7 @@ export default function Footer() {
       content: (
         <div className="space-y-3 text-xs text-slate-300 leading-relaxed">
           <p>
-            Methum Constructions respects the privacy of all commercial partners,
+            Methum Construction respects the privacy of all commercial partners,
             tendering authorities, and private clients:
           </p>
           <ul className="list-disc pl-5 space-y-1.5 text-slate-400">
@@ -191,7 +191,7 @@ export default function Footer() {
       content: (
         <div className="space-y-3 text-xs text-slate-300 leading-relaxed">
           <p>
-            Guidelines for inviting Methum Constructions to tender or requesting
+            Guidelines for inviting Methum Construction to tender or requesting
             subcontract bids:
           </p>
           <ul className="list-disc pl-5 space-y-1.5 text-slate-400">
@@ -257,7 +257,7 @@ export default function Footer() {
                   <div className="relative overflow-hidden transition-all duration-300 group-hover:scale-[1.04]">
                     <img
                       src="/logo-white.png"
-                      alt="Methum Constructions"
+                      alt="Methum Construction"
                       className="h-16 sm:h-20 w-auto object-contain transition duration-300 animate-logo-glow filter drop-shadow-sm"
                     />
                     {/* Metallic Sheen Glare Animation (Slow & Elegant) */}
@@ -418,7 +418,7 @@ export default function Footer() {
                 Connect With Us
               </span>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Follow Methum Constructions on official networks for live site
+                Follow Methum Construction on official networks for live site
                 telemetry, machinery fleet additions & tender notices.
               </p>
 

@@ -17,7 +17,7 @@ export default function LeadershipAbout() {
           </h2>
 
           <p className="text-slate-300 text-sm leading-relaxed">
-            Registered officially as Methum Constructions, our operations represent more than 10 years of active field experience in civil road contracting, municipal drainage systems, and government building construction across Monaragala and the Uva province.
+            Registered officially as Methum Construction, our operations represent more than 10 years of active field experience in civil road contracting, municipal drainage systems, and government building construction across Monaragala and the Uva province.
           </p>
 
           <p className="text-slate-400 text-xs leading-relaxed">

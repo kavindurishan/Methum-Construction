@@ -15,7 +15,7 @@ export default function Sectors() {
             Core Operational Sectors
           </h2>
           <p className="text-slate-400 text-sm mt-2 max-w-2xl leading-relaxed">
-            From regional road metalling and tarring contracts to institutional building infrastructure and heavy plant machinery hire, Methum Constructions delivers end-to-end execution.
+            From regional road metalling and tarring contracts to institutional building infrastructure and heavy plant machinery hire, Methum Construction delivers end-to-end execution.
           </p>
         </div>
 

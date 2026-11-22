@@ -16,7 +16,7 @@ export default function QuickEstimator() {
   const handleWhatsAppSend = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const msg = `*New Inquiry - Methum Constructions Website*
+    const msg = `*New Inquiry - Methum Construction Website*
 ----------------------------------
 *Name:* ${clientName || "Not provided"}
 *Phone:* ${clientPhone || "Not provided"}
@@ -234,7 +234,7 @@ Please provide an estimated quote and availability.`;
             Frequently Asked Questions
           </h3>
           <p className="text-xs text-slate-400">
-            Everything you need to know about partnering with Methum Constructions.
+            Everything you need to know about partnering with Methum Construction.
           </p>
         </div>
 

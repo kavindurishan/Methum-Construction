@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: `Contact Us | ${siteConfig.company.name} - Tender Desk & Heavy Fleet`,
-  description: `Contact Methum Constructions head office, central plant yard, tender desk, and 24/7 machinery dispatch hotlines across Sri Lanka.`,
+  description: `Contact Methum Construction head office, central plant yard, tender desk, and 24/7 machinery dispatch hotlines across Sri Lanka.`,
 };
 
 export default function ContactPage() {
@@ -34,7 +34,7 @@ export default function ContactPage() {
             <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
               Get in Touch with <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-200">
-                Methum Constructions
+                Methum Construction
               </span>
             </h1>
 
