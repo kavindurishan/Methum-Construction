@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { siteConfig } from "@/data/siteData";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function QuickEstimator() {
   const [service, setService] = useState("Road Construction (Asphalt / Concrete)");
@@ -203,9 +204,10 @@ Please provide an estimated quote and availability.`;
                 <div className="pt-3 flex flex-col sm:flex-row items-center gap-3">
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-950/50"
+                    className="w-full sm:w-auto px-6 py-3 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl flex items-center justify-center gap-2.5 transition shadow-lg shadow-emerald-950/50 group"
                   >
-                    <span>💬 Direct WhatsApp Quote</span>
+                    <WhatsAppIcon className="w-5 h-5 text-white flex-shrink-0 transition-transform group-hover:scale-110" />
+                    <span>Direct WhatsApp Quote</span>
                   </button>
 
                   <button

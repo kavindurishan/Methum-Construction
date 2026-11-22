@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { siteConfig, MachineryItem } from "@/data/siteData";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function MachineryFleet() {
   const [filterType, setFilterType] = useState<"all" | "rent" | "sale">("all");
@@ -199,7 +200,7 @@ export default function MachineryFleet() {
                       : "bg-emerald-600 hover:bg-emerald-500 text-white"
                   }`}
                 >
-                  <span>💬</span>
+                  <WhatsAppIcon className="w-3.5 h-3.5 flex-shrink-0" />
                   <span>{isSale ? "Inquire" : "Dispatch"}</span>
                 </a>
               </div>

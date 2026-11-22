@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { siteConfig } from "@/data/siteData";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -179,9 +180,10 @@ export default function ContactForm() {
               <button
                 type="button"
                 onClick={handleWhatsApp}
-                className="w-full sm:w-auto px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-950/40"
+                className="w-full sm:w-auto px-6 py-3.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl flex items-center justify-center gap-2.5 transition shadow-lg shadow-emerald-950/40 group"
               >
-                <span>💬 Direct WhatsApp Message</span>
+                <WhatsAppIcon className="w-5 h-5 text-white flex-shrink-0 transition-transform group-hover:scale-110" />
+                <span>Direct WhatsApp Message</span>
               </button>
 
               <button
