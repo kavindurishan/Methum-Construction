@@ -251,17 +251,17 @@ export default function Footer() {
                   className="inline-flex flex-col items-start group select-none relative cursor-pointer"
                 >
                   {/* Ambient Golden Glow Aura (Wear Inhouse Style) */}
-                  <div className="absolute -inset-3 bg-gradient-to-r from-amber-500/25 via-amber-400/30 to-yellow-500/20 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none -z-10" />
+                  <div className="absolute -inset-2 bg-amber-500/15 blur-xl opacity-50 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none -z-10" />
 
-                  {/* Main Logo Image (Enlarged & Prominently Focused) */}
-                  <div className="relative overflow-hidden rounded-xl p-1.5 bg-slate-950/60 border border-amber-500/30 shadow-xl shadow-amber-950/40 transition-all duration-300 group-hover:scale-[1.04] group-hover:border-amber-400">
+                  {/* Main Logo Image (Enlarged & Clean - No Orange Frame) */}
+                  <div className="relative overflow-hidden transition-all duration-300 group-hover:scale-[1.04]">
                     <img
                       src="/logo-white.png"
                       alt="Methum Constructions"
-                      className="h-16 sm:h-20 w-auto object-contain transition duration-300 animate-logo-glow"
+                      className="h-16 sm:h-20 w-auto object-contain transition duration-300 animate-logo-glow filter drop-shadow-sm"
                     />
-                    {/* Metallic Sheen Glare Animation */}
-                    <div className="absolute inset-0 w-2/3 h-full bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none animate-logo-sheen" />
+                    {/* Metallic Sheen Glare Animation (Slow & Elegant) */}
+                    <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none animate-logo-sheen" />
                   </div>
 
                   {/* Futuristic Laser Hairline with Sweep Animation (Wear Inhouse Style) */}

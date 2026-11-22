@@ -49,27 +49,27 @@ body {
   box-shadow: 0 0 40px -10px rgba(234, 88, 12, 0.25);
 }
 
-/* Metallic Light Sheen Animation for Logo */
+/* Metallic Light Sheen Animation for Logo - Slow, Smooth & Elegant */
 @keyframes logoShine {
   0% {
-    transform: translateX(-180%) skewX(-25deg);
+    transform: translateX(-160%) skewX(-20deg);
     opacity: 0;
   }
-  5% {
-    opacity: 0.8;
+  10% {
+    opacity: 0.55;
   }
-  30% {
-    transform: translateX(280%) skewX(-25deg);
-    opacity: 0.8;
+  55% {
+    transform: translateX(250%) skewX(-20deg);
+    opacity: 0.55;
   }
-  35%, 100% {
-    transform: translateX(280%) skewX(-25deg);
+  62%, 100% {
+    transform: translateX(250%) skewX(-20deg);
     opacity: 0;
   }
 }
 
 .animate-logo-sheen {
-  animation: logoShine 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: logoShine 7.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 /* Wear Inhouse Futuristic Laser Sweep Hairline */
