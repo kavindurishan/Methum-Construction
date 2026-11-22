@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { siteConfig, ProjectItem } from "@/data/siteData";
+import { siteConfig } from "@/data/siteData";
 
 export default function LandmarkProjects() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
@@ -17,14 +17,14 @@ export default function LandmarkProjects() {
   return (
     <section id="projects" className="max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-12">
       
-      {/* Featured Viaduct & High-Rise Showcase Banner */}
+      {/* Featured Civil Engineering Showcase Banner */}
       <div className="relative rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Image Container */}
           <div className="relative min-h-[360px] lg:min-h-[480px]">
             <img
               src="/showcase.jpg"
-              alt="Methum Constructions Landmark Infrastructure"
+              alt="Methum Constructions Civil Infrastructure"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-transparent via-[#0f172a]/60 to-[#0f172a]"></div>
@@ -34,38 +34,34 @@ export default function LandmarkProjects() {
           <div className="p-8 md:p-12 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
-                Flagship Infrastructure Portfolio
+                Proven Track Record
               </div>
               
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
-                High-Speed Viaducts, Arterial Highways & Urban Complexes
+                High-Durability Highways, Public Infrastructure & Commercial Facilities
               </h3>
               
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                Utilizing state-of-the-art asphalt batching plants, pneumatic vibratory compactors, and automated pavers, Methum Constructions executes critical civil infrastructure with zero margin for compromise.
-              </p>
-              
-              <p className="text-amber-400 font-sinhala text-xs font-medium">
-                මහා පරිමාණ මහාමාර්ග, පාලම් හා උසස් වාණිජ ගොඩනැගිලි ඉංජිනේරු තාක්ෂණයෙන් නියමිත වේලාවට නිමකිරීම.
+                From high-specification road metalling, asphalt second-coat tarring, and concrete pavements to institutional complexes, structural cladding, and deep drainage works, Methum Constructions delivers civil engineering excellence across the Uva and national corridors.
               </p>
 
               {/* Technical Specifications Matrix */}
               <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800 text-xs">
                 <div>
-                  <div className="text-slate-400">Methodology</div>
-                  <div className="font-bold text-white mt-0.5">Heavy Bitumen Macadam</div>
+                  <div className="text-slate-400">Road Engineering</div>
+                  <div className="font-bold text-white mt-0.5">Metalling, Tarring & Concrete</div>
                 </div>
                 <div>
                   <div className="text-slate-400">Quality Standard</div>
-                  <div className="font-bold text-white mt-0.5">RDA Density 98%+</div>
+                  <div className="font-bold text-white mt-0.5">RDA / CIDA Compliant</div>
                 </div>
                 <div>
-                  <div className="text-slate-400">Heavy Plant Mobilized</div>
-                  <div className="font-bold text-white mt-0.5">CAT 320D, Sakai Rollers</div>
+                  <div className="text-slate-400">Institutional Projects</div>
+                  <div className="font-bold text-white mt-0.5">District Secretariats & Sacred Cities</div>
                 </div>
                 <div>
-                  <div className="text-slate-400">Delivery Status</div>
-                  <div className="font-bold text-emerald-400 mt-0.5">Ahead of Schedule</div>
+                  <div className="text-slate-400">Project Delivery</div>
+                  <div className="font-bold text-emerald-400 mt-0.5">100% On-Time Completion</div>
                 </div>
               </div>
             </div>
@@ -73,15 +69,15 @@ export default function LandmarkProjects() {
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <Link
                 href="#estimator"
-                className="px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs transition"
+                className="px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs transition uppercase tracking-wider"
               >
-                Inquire for Similar Project
+                Request Project Quotation
               </Link>
               <a
                 href={`tel:${siteConfig.contacts.hotlines[0].replace(/\s+/g, "")}`}
                 className="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs border border-slate-700 transition"
               >
-                Call Project Engineers
+                Call Project Engineering Desk
               </a>
             </div>
           </div>
@@ -92,16 +88,14 @@ export default function LandmarkProjects() {
       <div className="space-y-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-800 pb-6">
           <div>
-            <div className="text-xs font-bold uppercase tracking-wider text-amber-500 flex items-center gap-2">
-              <span>Track Record of Excellence</span>
-              <span className="text-slate-600">|</span>
-              <span className="font-sinhala text-slate-400 font-normal">ව්‍යාපෘති ලැයිස්තුව</span>
+            <div className="text-xs font-bold uppercase tracking-wider text-amber-500">
+              Contract Portfolio
             </div>
             <h2 className="text-3xl font-extrabold text-white mt-1">
               Featured Landmark Projects
             </h2>
             <p className="text-slate-400 text-sm mt-1">
-              Explore recent road contracts, commercial facilities, and civil infrastructure delivered across Sri Lanka.
+              Explore our completed government tenders, provincial road contracts, and institutional building developments.
             </p>
           </div>
 
@@ -124,11 +118,11 @@ export default function LandmarkProjects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="bg-[#0a0f1d] border border-slate-800 hover:border-amber-500/40 rounded-2xl p-6 flex flex-col justify-between space-y-4 transition group shadow-xl"
+              className="bg-[#0a0f1d] border border-slate-800 hover:border-amber-500/50 rounded-2xl p-6 flex flex-col justify-between space-y-4 transition group shadow-xl"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-2">
@@ -147,17 +141,18 @@ export default function LandmarkProjects() {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-bold text-white group-hover:text-amber-400 transition">
+                  <h4 className="text-base font-bold text-white group-hover:text-amber-400 transition leading-snug">
                     {project.title}
                   </h4>
-                  <p className="text-xs text-amber-500/80 font-sinhala font-medium mt-0.5">
-                    {project.sinhalaTitle}
-                  </p>
                 </div>
 
-                <div className="text-xs text-slate-400">
-                  <strong className="text-slate-300">Client:</strong> {project.client} |{" "}
-                  <strong className="text-slate-300">Location:</strong> {project.location}
+                <div className="text-xs text-slate-400 space-y-1 bg-slate-900/50 p-3 rounded-xl border border-slate-800/60">
+                  <div>
+                    <strong className="text-slate-300">Client:</strong> {project.client}
+                  </div>
+                  <div>
+                    <strong className="text-slate-300">Location:</strong> {project.location}
+                  </div>
                 </div>
 
                 <p className="text-xs text-slate-400 leading-relaxed">
@@ -177,13 +172,13 @@ export default function LandmarkProjects() {
 
               <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
                 <span className="text-slate-500 text-[11px]">
-                  CIDA Standards Verified
+                  Verified Civil Contract
                 </span>
                 <Link
                   href="#estimator"
                   className="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1"
                 >
-                  Request Similar Project Estimate →
+                  Inquire Scope →
                 </Link>
               </div>
             </div>

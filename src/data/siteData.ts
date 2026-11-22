@@ -21,7 +21,6 @@ export interface MachineryItem {
 export interface ProjectItem {
   id: string;
   title: string;
-  sinhalaTitle: string;
   category: "Roads & Highways" | "Commercial Buildings" | "Infrastructure";
   client: string;
   location: string;
@@ -258,82 +257,161 @@ export const siteConfig = {
     },
   ],
   projects: [
+    // --- ROAD PROJECTS ---
     {
-      id: "central-expressway-feeder",
-      title: "Regional Highway Expansion & Asphalt Surfacing",
-      sinhalaTitle: "ප්‍රාදේශීය මහාමාර්ග සංවර්ධනය හා කාපට් ඇතිරීම",
+      id: "pilisarana-road-concreting",
+      title: "Drainage Construction & Concrete Road Surface Paving",
       category: "Roads & Highways",
-      client: "Road Development Authority (RDA) / Provincial Council",
-      location: "Western / Central Corridor",
+      client: "Provincial Road Development Authority / Local Council",
+      location: "Pilisarana Road, Monaragala",
       year: "2023 - 2024",
       status: "Completed",
       scope:
-        "Full asphalt concrete overlay of 18.5 km dual-lane highway, construction of 24 box culverts, aggregate subbase grading, and continuous storm drainage retaining walls.",
+        "Construction of reinforced roadside storm drainage systems and precision concrete road surface paving to provide all-weather access along the Pilisarana corridor.",
       highlights: [
-        "18.5 km Bituminous Macadam Finished",
-        "Heavy Asphalt Pavers & Sakai 10T Compaction",
-        "Delivered 3 Weeks Ahead of Schedule",
+        "Reinforced Concrete Surface Paving",
+        "Deep Stormwater Line Drainage",
+        "Subbase Preparation & Compaction",
       ],
     },
     {
-      id: "industrial-logistics-complex",
-      title: "Commercial Multi-Story Logistics & Warehouse Complex",
-      sinhalaTitle: "මහා පරිමාණ කාර්මික ගබඩා සංකීර්ණය",
-      category: "Commercial Buildings",
-      client: "Private Corporate Logistics Group",
-      location: "Kelaniya / Biyagama Industrial Zone",
-      year: "2023 - Ongoing",
-      status: "Ongoing",
-      scope:
-        "Turnkey design and structural construction of a 45,000 sq.ft pre-engineered steel and reinforced concrete industrial warehouse featuring heavy floor slabs and administrative offices.",
-      highlights: [
-        "Heavy Duty 30 MPa Industrial Slabs",
-        "Clear Span Pre-Engineered Steel Structure",
-        "Complete MEP & Fire Safety Systems",
-      ],
-    },
-    {
-      id: "luxury-residential-turnkey",
-      title: "Luxury Contemporary Residence Development",
-      sinhalaTitle: "සුඛෝපභෝගී නවීන නේවාසික ගොඩනැගිලි සංකීර්ණය",
-      category: "Commercial Buildings",
-      client: "Private Residential Client",
-      location: "Colombo Suburbs (Battaramulla)",
+      id: "karanda-kendawinna-medagama-tarring",
+      title: "Second-Coat Bituminous Tarring & Road Resurfacing",
+      category: "Roads & Highways",
+      client: "Provincial Road Development Authority (PRDA) - Uva",
+      location: "Karanda - Kendawinna - Medagama Road",
       year: "2023",
       status: "Completed",
       scope:
-        "Architectural structural engineering and complete turnkey execution of a 3-story luxury contemporary villa with cantilevered balconies, infinity plunge pool, and smart building integration.",
+        "Execution of second-coat tarring, bitumen emulsion spraying, aggregate chip spreading, and high-density pneumatic roller compaction for long-term road preservation.",
       highlights: [
-        "Complete Architectural & Civil Handover",
-        "Waterproofing & Premium Finishes",
-        "100% CIDA Standards Compliance",
+        "Bitumen Emulsion & Chip Sealing",
+        "Pavement Regulation & Surface Dressing",
+        "RDA Specification Conformance",
       ],
     },
     {
-      id: "bridge-culvert-rehabilitation",
-      title: "Twin-Cell Box Bridge & Flood Drainage Corridor",
-      sinhalaTitle: "ද්විත්ව බොක්කු පාලම් හා ගංවතුර පාලන පද්ධතිය",
-      category: "Infrastructure",
-      client: "Irrigation & Provincial Infrastructure Ministry",
-      location: "Gampaha District",
-      year: "2022 - 2023",
+      id: "buddama-baduluwela-metalling",
+      title: "New Metalling & Aggregate Base Course Construction",
+      category: "Roads & Highways",
+      client: "Provincial Infrastructure Division",
+      location: "9th Mile Post, Buddama - Baduluwela Road",
+      year: "2023 - 2024",
       status: "Completed",
       scope:
-        "Construction of twin-cell reinforced concrete box bridge across high-discharge waterway, including 150m gabion retaining walls, piling work, and approach road paving.",
+        "Excavation, grading, supply, spreading, and heavy vibratory compaction of graded aggregate base metal to reconstruct the structural foundation of the roadway.",
       highlights: [
-        "Bored Piling & Reinforced Concrete Box Structure",
-        "Heavy Earthmoving using 20T Excavator Fleet",
-        "Zero Loss Time Injury (LTI) Safety Record",
+        "Heavy Graded Aggregate Metalling",
+        "10-Ton Vibratory Roller Compaction",
+        "Subgrade Soil Stabilization",
+      ],
+    },
+    {
+      id: "mariarawa-ritigahawatta-retaining-wall",
+      title: "Reinforced Retaining Wall & Drainage System Construction",
+      category: "Roads & Highways",
+      client: "Provincial Road Development Ministry",
+      location: "Mariarawa - Ritigahawatta - Buddama Road",
+      year: "2023",
+      status: "Completed",
+      scope:
+        "Civil construction of structural retaining walls for landslide slope stabilization and heavy-duty storm drains to secure vulnerable road embankments against flooding.",
+      highlights: [
+        "Reinforced Concrete Retaining Walls",
+        "Erosion Control & Slope Protection",
+        "Deep Waterway Drainage Channels",
+      ],
+    },
+
+    // --- BUILDING PROJECTS ---
+    {
+      id: "district-secretariat-staircase-cladding",
+      title: "External Staircase Construction & Architectural Cladding Works",
+      category: "Commercial Buildings",
+      client: "District Secretariat, Monaragala",
+      location: "District Secretariat Complex, Monaragala",
+      year: "2023 - 2024",
+      status: "Completed",
+      scope:
+        "Structural engineering construction of external reinforced concrete staircase and complete architectural repair and refurbishment of exterior aluminum composite cladding panels.",
+      highlights: [
+        "Exterior Concrete Staircase Structure",
+        "Architectural ACP Cladding Rehabilitation",
+        "Weatherproof Commercial Facade Works",
+      ],
+    },
+    {
+      id: "quarters-5a-repair",
+      title: "Comprehensive Civil Renovation & Upgrading of Quarters 5A",
+      category: "Commercial Buildings",
+      client: "District Secretariat, Monaragala",
+      location: "District Secretariat Quarters, Monaragala",
+      year: "2023",
+      status: "Completed",
+      scope:
+        "Complete structural renovation of official quarters 5A, including masonry reinforcement, roof overhaul, modern plumbing, electrical rewiring, and premium interior/exterior finishes.",
+      highlights: [
+        "Structural Masonry & Roof Rehabilitation",
+        "Modern Plumbing & Electrical Overhaul",
+        "Turnkey Handover for Senior Officials",
+      ],
+    },
+    {
+      id: "nila-piyasa-sewerage-system",
+      title: "Rehabilitation of Central Sewerage & Wastewater System",
+      category: "Infrastructure",
+      client: "District Secretariat, Monaragala",
+      location: "Nila Piyasa Housing Complex, Monaragala",
+      year: "2023 - 2024",
+      status: "Completed",
+      scope:
+        "Comprehensive overhaul of deep underground sewerage pipeline networks, manholes, inspection chambers, and septic soakage infrastructure for the entire housing complex.",
+      highlights: [
+        "Deep Underground Pipeline Overhaul",
+        "Reconstruction of Manholes & Chambers",
+        "Full Environmental Compliance Verification",
+      ],
+    },
+    {
+      id: "seva-piyasa-hulandawa-improvement",
+      title: "Structural Improvement & Civil Upgrading of Seva Piyasa Building",
+      category: "Commercial Buildings",
+      client: "Divisional Secretariat / Rural Development",
+      location: "Hulandawa Left, Monaragala",
+      year: "2023",
+      status: "Completed",
+      scope:
+        "Structural enhancements, roof leakproofing, flooring, public service counter construction, and complete interior/exterior weatherproofing to enhance community service delivery.",
+      highlights: [
+        "Community Administrative Center Upgrade",
+        "Roofing & Structural Weatherproofing",
+        "Turnkey Public Service Facilities",
+      ],
+    },
+    {
+      id: "katharagama-pilgrims-rest-renovation",
+      title: "Architectural Renovation of Hindu Pilgrims Rest Complex",
+      category: "Commercial Buildings",
+      client: "Sacred City Development Project",
+      location: "Katharagama Sacred City",
+      year: "2023 - 2024",
+      status: "Completed",
+      scope:
+        "Large-scale architectural restoration and civil refurbishment of multi-hall pilgrim accommodation facilities, structural repairs, sanitation blocks, and interior restoration.",
+      highlights: [
+        "High-Capacity Pilgrimage Rest Restoration",
+        "Sanitary Facilities & Water Distribution",
+        "Cultural Heritage Area Compliance",
       ],
     },
   ],
   partners: [
+    "District Secretariat, Monaragala",
     "Road Development Authority (RDA)",
-    "Urban Development Authority (UDA)",
+    "Provincial Road Development Authority (PRDA - Uva)",
     "Construction Industry Development Authority (CIDA)",
-    "State Engineering Corporation",
-    "Ceylon Electricity Board (CEB)",
-    "Provincial Road Development Authorities",
+    "Urban Development Authority (UDA)",
+    "Sacred City Development Project",
   ],
   faqs: [
     {
