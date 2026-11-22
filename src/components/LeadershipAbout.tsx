@@ -60,21 +60,31 @@ export default function LeadershipAbout() {
                 "{siteConfig.leadership.message}"
               </blockquote>
 
-              <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <div className="pt-5 border-t border-slate-800/80 flex items-center justify-between gap-4">
                 <div>
-                  <h4 className="font-extrabold text-white text-base">
+                  <h4 className="font-extrabold text-white text-base sm:text-lg">
                     {siteConfig.leadership.directorName}
                   </h4>
-                  <p className="text-xs text-amber-400 font-semibold mt-0.5">
+                  <p className="text-xs sm:text-sm text-amber-400 font-bold mt-0.5">
                     {siteConfig.leadership.title}
                   </p>
-                  <p className="text-[11px] text-slate-400 mt-0.5">
+                  <p className="text-[11px] text-slate-400 mt-1">
                     {siteConfig.company.name} • Badalkumbura
                   </p>
                 </div>
 
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center font-bold text-xl">
-                  MC
+                {/* Owner Executive Portrait */}
+                <div className="relative shrink-0">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-amber-500/60 shadow-xl shadow-amber-500/20 bg-slate-900 ring-4 ring-amber-500/10">
+                    <img
+                      src={siteConfig.leadership.image}
+                      alt={`${siteConfig.leadership.directorName} - Founder & Proprietor`}
+                      className="w-full h-full object-cover object-top hover:scale-105 transition duration-300"
+                    />
+                  </div>
+                  <div className="absolute -bottom-1 -right-1 px-1.5 py-0.5 rounded-md bg-amber-500 text-slate-950 font-black text-[9px] uppercase tracking-wider shadow border border-slate-900">
+                    FOUNDER
+                  </div>
                 </div>
               </div>
             </div>

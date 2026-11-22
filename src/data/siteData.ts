@@ -69,6 +69,7 @@ export const siteConfig = {
   leadership: {
     directorName: "R.M.P. Rathnayaka",
     title: "Founder & Proprietor",
+    image: "/owner-portrait.jpg",
     message:
       "At Methum Construction, our core philosophy is grounded in integrity, high-quality civil execution, and dependable machinery support. Backed by more than a decade of hands-on experience in road networks, institutional facilities, and heavy plant operations across the Uva province and beyond, we deliver solid infrastructure that stands the test of time.",
   },
