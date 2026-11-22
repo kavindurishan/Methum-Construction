@@ -6,14 +6,12 @@ export default function SiteIntroLoader() {
   const [mounted, setMounted] = useState(false);
   const [isActive, setIsActive] = useState(true);
   const [isDismissing, setIsDismissing] = useState(false);
-  const [activeSubtext, setActiveSubtext] = useState<string>("CIVIL INFRASTRUCTURE & FLEET");
 
   // 1. Initial Page Load & Browser Refresh (F5) Trigger
   useEffect(() => {
     setMounted(true);
     setIsActive(true);
     setIsDismissing(false);
-    setActiveSubtext("CIVIL INFRASTRUCTURE & FLEET");
 
     const dismissTimer = setTimeout(() => {
       setIsDismissing(true);
@@ -34,11 +32,7 @@ export default function SiteIntroLoader() {
     let dismissT: NodeJS.Timeout;
     let removeT: NodeJS.Timeout;
 
-    const handleTabTransition = (e: Event) => {
-      const customEvent = e as CustomEvent<{ section?: string }>;
-      const sectionName = customEvent.detail?.section || "OPERATIONS";
-
-      setActiveSubtext(`NAVIGATING // ${sectionName.toUpperCase()}`);
+    const handleTabTransition = () => {
       setIsActive(true);
       setIsDismissing(false);
 
@@ -125,17 +119,6 @@ export default function SiteIntroLoader() {
         {/* Futuristic Laser Hairline with Sweep Animation */}
         <div className="w-56 sm:w-72 md:w-80 h-[2px] bg-slate-800 mt-4 relative overflow-hidden rounded-full">
           <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent via-amber-400 to-transparent animate-laser-sweep" />
-        </div>
-
-        {/* Dynamic Subtag Indicator (Switches dynamically per tab) */}
-        <div className="flex items-center gap-2 mt-3.5 px-3 py-1 rounded-full bg-slate-900/80 border border-amber-500/30 text-[10px] sm:text-xs font-mono tracking-[0.2em] text-slate-300 uppercase shadow-lg">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
-          </span>
-          <span className="text-amber-400 font-bold tracking-widest">
-            {activeSubtext}
-          </span>
         </div>
       </div>
     </div>
