@@ -19,30 +19,24 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm transition-all">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 sm:h-26 flex items-center justify-between gap-6">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm transition-all duration-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between gap-4">
         
-        {/* ENLARGED LOGO WITH METALLIC SHEEN ANIMATION */}
-        <Link href="/" className="flex items-center shrink-0 group py-1">
-          <div className="relative overflow-hidden rounded-xl p-1 transition-all duration-300 ease-out group-hover:scale-105 group-hover:drop-shadow-md">
-            
-            {/* The Logo Image - Sized prominently so 'Methum construction' text is crisp & clear */}
+        {/* COMPACT & CRISP LOGO WITH LIGHT SHEEN ANIMATION */}
+        <Link href="/" className="flex items-center shrink-0 group">
+          <div className="relative overflow-hidden rounded-lg p-0.5 transition-all duration-300 ease-out group-hover:scale-105">
             <img
               src="/logo.png"
               alt="Methum construction"
-              className="h-16 sm:h-20 lg:h-22 w-auto object-contain transition duration-300"
+              className="h-12 sm:h-14 w-auto object-contain transition duration-200"
             />
-
-            {/* Continuous Metallic Light Glare / Sheen Sweep Animation */}
+            {/* Metallic Sheen Glare Animation */}
             <div className="absolute inset-0 w-2/3 h-full bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none animate-logo-sheen"></div>
-            
-            {/* Subtle Amber Glow on Hover */}
-            <div className="absolute inset-0 rounded-xl bg-amber-500/0 group-hover:bg-amber-500/5 transition duration-300 pointer-events-none"></div>
           </div>
         </Link>
 
-        {/* CLEAN MINIMALIST NAVIGATION (NAWALOKA EXACT STYLE) */}
-        <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
+        {/* CLEAN MINIMALIST NAVIGATION */}
+        <nav className="hidden lg:flex items-center gap-7 xl:gap-8">
           {navItems.map((item) => {
             const isActive = activeTab === item.name;
 
@@ -51,7 +45,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setActiveTab(item.name)}
-                className={`text-[15px] transition duration-200 py-1 border-b-2 font-medium ${
+                className={`text-[14px] transition duration-200 py-1 border-b-2 font-medium ${
                   isActive
                     ? "font-bold text-gray-950 border-amber-500"
                     : "text-gray-600 hover:text-gray-950 border-transparent hover:border-amber-500"
@@ -63,13 +57,13 @@ export default function Header() {
           })}
         </nav>
 
-        {/* RIGHT SIDE CONTACT QUICK LINK & MOBILE HAMBURGER */}
-        <div className="flex items-center gap-4">
+        {/* RIGHT SIDE ACTION BUTTONS */}
+        <div className="flex items-center gap-3">
           <a
             href={`https://wa.me/${siteConfig.contacts.whatsapp.replace(/\D/g, "")}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-gray-950 text-xs font-black uppercase tracking-wider transition shadow-sm hover:shadow-md"
+            className="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-gray-950 text-xs font-bold uppercase tracking-wider transition shadow-sm"
           >
             <span>Get a Quote</span>
           </a>
@@ -81,7 +75,7 @@ export default function Header() {
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -107,9 +101,9 @@ export default function Header() {
 
       </div>
 
-      {/* Clean Mobile Menu */}
+      {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-gray-200 px-4 py-3 space-y-2 shadow-lg">
+        <div className="lg:hidden bg-white border-b border-gray-200 px-4 py-3 space-y-1.5 shadow-lg">
           {navItems.map((item) => (
             <Link
               key={item.name}
