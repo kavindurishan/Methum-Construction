@@ -48,3 +48,27 @@ body {
 .glow-orange {
   box-shadow: 0 0 40px -10px rgba(234, 88, 12, 0.25);
 }
+
+/* Metallic Light Sheen Animation for Logo */
+@keyframes logoShine {
+  0% {
+    transform: translateX(-180%) skewX(-25deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  30% {
+    transform: translateX(280%) skewX(-25deg);
+    opacity: 0.8;
+  }
+  35%, 100% {
+    transform: translateX(280%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+.animate-logo-sheen {
+  animation: logoShine 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+

@@ -20,18 +20,28 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm transition-all">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 sm:h-26 flex items-center justify-between gap-6">
         
-        {/* LOGO ON THE FAR LEFT - Clean on White Background (Just like the reference) */}
-        <Link href="/" className="flex items-center shrink-0">
-          <img
-            src="/logo.png"
-            alt="Methum construction"
-            className="h-12 sm:h-14 w-auto object-contain"
-          />
+        {/* ENLARGED LOGO WITH METALLIC SHEEN ANIMATION */}
+        <Link href="/" className="flex items-center shrink-0 group py-1">
+          <div className="relative overflow-hidden rounded-xl p-1 transition-all duration-300 ease-out group-hover:scale-105 group-hover:drop-shadow-md">
+            
+            {/* The Logo Image - Sized prominently so 'Methum construction' text is crisp & clear */}
+            <img
+              src="/logo.png"
+              alt="Methum construction"
+              className="h-16 sm:h-20 lg:h-22 w-auto object-contain transition duration-300"
+            />
+
+            {/* Continuous Metallic Light Glare / Sheen Sweep Animation */}
+            <div className="absolute inset-0 w-2/3 h-full bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none animate-logo-sheen"></div>
+            
+            {/* Subtle Amber Glow on Hover */}
+            <div className="absolute inset-0 rounded-xl bg-amber-500/0 group-hover:bg-amber-500/5 transition duration-300 pointer-events-none"></div>
+          </div>
         </Link>
 
-        {/* CLEAN MINIMALIST NAVIGATION (EXACTLY LIKE NAWALOKA SCREENSHOT) */}
+        {/* CLEAN MINIMALIST NAVIGATION (NAWALOKA EXACT STYLE) */}
         <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
           {navItems.map((item) => {
             const isActive = activeTab === item.name;
@@ -59,7 +69,7 @@ export default function Header() {
             href={`https://wa.me/${siteConfig.contacts.whatsapp.replace(/\D/g, "")}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-gray-950 text-xs font-bold transition shadow-sm"
+            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-gray-950 text-xs font-black uppercase tracking-wider transition shadow-sm hover:shadow-md"
           >
             <span>Get a Quote</span>
           </a>
@@ -118,7 +128,7 @@ export default function Header() {
               href={`https://wa.me/${siteConfig.contacts.whatsapp.replace(/\D/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center py-2.5 bg-amber-500 text-gray-950 rounded-lg font-bold text-xs block"
+              className="w-full text-center py-2.5 bg-amber-500 text-gray-950 rounded-lg font-bold text-xs block uppercase tracking-wider"
             >
               WhatsApp Dispatch
             </a>
