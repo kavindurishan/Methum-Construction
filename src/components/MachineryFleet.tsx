@@ -25,9 +25,19 @@ export default function MachineryFleet() {
   });
 
   return (
-    <section id="machinery" className="max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-8">
-      {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-800 pb-6">
+    <section id="machinery" className="relative max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-8 overflow-hidden">
+      {/* Pattern 2: Dynamic CAD Blueprint Grid & GPS Coordinates */}
+      <div className="absolute inset-0 z-0 bg-cad-grid animate-grid-drift opacity-60 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#070b14] via-transparent to-[#070b14]" />
+        <div className="absolute inset-0 bg-radial from-transparent via-[#070b14]/75 to-[#070b14]" />
+        <div className="absolute top-6 left-8 text-[9px] font-mono text-amber-500/25 tracking-widest hidden md:block">
+          + PLANT DEPOT: BADALKUMBURA • 06°50&apos;24.4&quot;N 81°13&apos;45.8&quot;E
+        </div>
+      </div>
+
+      <div className="relative z-10 space-y-8">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-800 pb-6">
         <div>
           <div className="text-xs font-bold uppercase tracking-wider text-amber-500">
             Plant & Machinery Division
@@ -243,6 +253,7 @@ export default function MachineryFleet() {
         >
           Call Dispatch: {siteConfig.contacts.hotlines[1]}
         </a>
+      </div>
       </div>
     </section>
   );

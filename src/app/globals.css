@@ -148,4 +148,95 @@ body {
   animation-play-state: paused;
 }
 
+/* ========================================================
+   SECTION-BY-SECTION SIGNATURE BACKGROUND PATTERNS
+   ======================================================== */
+
+/* 1. Hero Section: Cinematic Ken Burns Pan Animation */
+@keyframes heroPanZoom {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-1.5%, -1%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.animate-hero-pan {
+  animation: heroPanZoom 20s ease-in-out infinite alternate;
+}
+
+/* 2. Sectors & Machinery Fleet: Dynamic CAD Blueprint Grid */
+.bg-cad-grid {
+  background-size: 38px 38px;
+  background-image: 
+    linear-gradient(to right, rgba(245, 158, 11, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 158, 11, 0.045) 1px, transparent 1px);
+}
+
+@keyframes cadGridDrift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 76px 76px;
+  }
+}
+
+.animate-grid-drift {
+  animation: cadGridDrift 30s linear infinite;
+}
+
+/* 3. Leadership & Quality HSE: Topographic Elevation Contours */
+@keyframes topoBreathe {
+  0%, 100% {
+    opacity: 0.12;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.22;
+    transform: scale(1.03) translate(-0.5%, -0.5%);
+  }
+}
+
+.animate-topo-contours {
+  animation: topoBreathe 12s ease-in-out infinite;
+}
+
+/* 4. Estimator & Contact: Ambient Civil Sparks / Glowing Embers */
+@keyframes sparkRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-110px) translateX(25px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.civil-spark {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f59e0b;
+  box-shadow: 0 0 10px #f59e0b, 0 0 20px rgba(245, 158, 11, 0.4);
+  pointer-events: none;
+}
+
+.animate-spark-1 { animation: sparkRise 5.5s infinite linear; }
+.animate-spark-2 { animation: sparkRise 7s infinite linear 1.2s; }
+.animate-spark-3 { animation: sparkRise 4.8s infinite linear 2.5s; }
+.animate-spark-4 { animation: sparkRise 8s infinite linear 0.7s; }
+.animate-spark-5 { animation: sparkRise 6.2s infinite linear 3.2s; }
+
+
 

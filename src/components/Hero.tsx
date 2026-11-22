@@ -5,16 +5,30 @@ import { siteConfig } from "@/data/siteData";
 export default function Hero() {
   return (
     <section className="relative min-h-[660px] lg:min-h-[720px] flex items-center border-b border-slate-800 overflow-hidden">
-      {/* Background Hero Asset */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/hero-banner.jpg"
-          alt="Methum Construction Hero Infrastructure"
-          className="w-full h-full object-cover object-center filter brightness-[0.38] contrast-125"
-        />
+      {/* Pattern 1: Hero Cinematic Video & Ken Burns Ambient Background */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/hero-banner.jpg"
+          className="w-full h-full object-cover object-center filter brightness-[0.4] contrast-125"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="/hero-video.webm" type="video/webm" />
+          <img
+            src="/hero-banner.jpg"
+            alt="Methum Construction Hero Infrastructure"
+            className="w-full h-full object-cover object-center filter brightness-[0.38] contrast-125 animate-hero-pan"
+          />
+        </video>
         {/* Multilayer Gradients for clean text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070b14] via-[#070b14]/85 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#070b14] via-[#070b14]/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070b14] via-[#070b14]/90 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070b14] via-[#070b14]/50 to-transparent"></div>
+
+        {/* Ambient Site Scan Line */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/10 to-transparent h-12 w-full animate-pulse pointer-events-none" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 pt-28 pb-16 sm:pt-36 sm:pb-24 w-full">

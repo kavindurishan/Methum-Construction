@@ -6,9 +6,19 @@ import { siteConfig } from "@/data/siteData";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-10">
-      {/* Section Header */}
-      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-slate-800/80 pb-8">
+    <section id="contact" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-10 overflow-hidden">
+      {/* Pattern 4: Ambient Civil Sparks & Glowing Embers */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="civil-spark animate-spark-1" style={{ bottom: "10%", left: "15%", width: 5, height: 5 }} />
+        <div className="civil-spark animate-spark-2" style={{ bottom: "20%", left: "40%", width: 6, height: 6 }} />
+        <div className="civil-spark animate-spark-3" style={{ bottom: "5%", left: "75%", width: 4, height: 4 }} />
+        <div className="civil-spark animate-spark-4" style={{ bottom: "28%", left: "88%", width: 5, height: 5 }} />
+        <div className="civil-spark animate-spark-5" style={{ bottom: "15%", left: "55%", width: 6, height: 6 }} />
+      </div>
+
+      <div className="relative z-10 space-y-10">
+        {/* Section Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-slate-800/80 pb-8">
         <div className="max-w-2xl space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
@@ -127,6 +137,7 @@ export default function ContactSection() {
       {/* Interactive Contact & Quotation Form */}
       <div>
         <ContactForm />
+      </div>
       </div>
     </section>
   );

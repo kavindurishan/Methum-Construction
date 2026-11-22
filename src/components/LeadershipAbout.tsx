@@ -3,8 +3,31 @@ import { siteConfig } from "@/data/siteData";
 
 export default function LeadershipAbout() {
   return (
-    <section id="about" className="max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-12">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <section id="about" className="relative max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-12 overflow-hidden">
+      {/* Pattern 3: Topographic Elevation Contours & Road Grading Survey Map */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none opacity-40">
+        <svg
+          className="w-[125%] h-[125%] text-amber-500/15 animate-topo-contours"
+          viewBox="0 0 800 500"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.2"
+        >
+          <path d="M50 120 Q 220 30 430 110 T 780 90" />
+          <path d="M30 180 Q 240 80 450 170 T 800 150" />
+          <path d="M40 240 Q 260 140 470 230 T 790 220" />
+          <path d="M20 310 Q 250 200 490 290 T 810 290" />
+          <path d="M60 390 Q 280 280 520 360 T 780 380" />
+          <circle cx="470" cy="230" r="45" strokeDasharray="3,3" />
+          <circle cx="470" cy="230" r="80" strokeDasharray="4,4" />
+        </svg>
+        <div className="absolute inset-0 bg-radial from-transparent via-[#070b14]/70 to-[#070b14]" />
+        <div className="absolute bottom-6 left-10 text-[9px] font-mono text-amber-500/25 tracking-widest hidden md:block">
+          SURVEY DATUM: MSL • CONTOUR ELEV: +184.25m
+        </div>
+      </div>
+
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
         {/* Left Column: Corporate Legacy */}
         <div className="lg:col-span-6 space-y-6">

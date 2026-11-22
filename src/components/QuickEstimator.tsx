@@ -47,6 +47,15 @@ Please provide an estimated quote and availability.`;
       <div className="rounded-3xl bg-gradient-to-br from-[#0f172a] via-[#0b1120] to-[#070b14] border border-amber-500/40 p-8 md:p-12 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
+        {/* Pattern 4: Ambient Civil Sparks & Glowing Embers */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="civil-spark animate-spark-1" style={{ bottom: "8%", left: "12%", width: 5, height: 5 }} />
+          <div className="civil-spark animate-spark-2" style={{ bottom: "14%", left: "34%", width: 6, height: 6 }} />
+          <div className="civil-spark animate-spark-3" style={{ bottom: "6%", left: "68%", width: 4, height: 4 }} />
+          <div className="civil-spark animate-spark-4" style={{ bottom: "22%", left: "82%", width: 5, height: 5 }} />
+          <div className="civil-spark animate-spark-5" style={{ bottom: "10%", left: "50%", width: 7, height: 7 }} />
+        </div>
+
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* Left Column: Context */}
