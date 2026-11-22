@@ -101,6 +101,43 @@ export default function LeadershipAbout() {
         </div>
 
       </div>
+
+      {/* Single-Line Huge Kinetic Typo Word Panel (Empty Space Accent) */}
+      <div className="-mx-4 md:-mx-8 pt-8 sm:pt-12 relative overflow-hidden select-none group">
+        {/* Left & Right Smooth Edge Fade Masks */}
+        <div className="absolute inset-y-0 left-0 w-20 sm:w-36 bg-gradient-to-r from-[#070b14] via-[#070b14]/90 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-20 sm:w-36 bg-gradient-to-l from-[#070b14] via-[#070b14]/90 to-transparent z-10 pointer-events-none" />
+
+        {/* Marquee Track Container */}
+        <div className="border-y border-amber-500/20 py-4 sm:py-5 bg-slate-950/50 backdrop-blur-sm">
+          <div className="flex w-max whitespace-nowrap animate-kinetic-left group-hover:[animation-play-state:paused] text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-mono tracking-widest">
+            <span className="flex items-center gap-6 sm:gap-8 shrink-0 pr-6 sm:pr-8">
+              <span className="text-stroke-amber-bold">METHUM CONSTRUCTION</span>
+              <span className="text-amber-400 text-xl sm:text-2xl font-normal">✦</span>
+              <span className="text-white font-extrabold tracking-tight">CIVIL ENGINEERING</span>
+              <span className="text-amber-400 text-xl sm:text-2xl font-normal">✦</span>
+              <span className="text-stroke-amber-bold">CIDA GRADE C7</span>
+              <span className="text-amber-400 text-xl sm:text-2xl font-normal">✦</span>
+              <span className="text-amber-400 font-extrabold tracking-tight">HEAVY PLANT FLEET</span>
+              <span className="text-amber-400 text-xl sm:text-2xl font-normal">✦</span>
+              <span className="text-stroke-amber-bold">BADALKUMBURA</span>
+              <span className="text-amber-400 text-xl sm:text-2xl font-normal">✦</span>
+            </span>
+            <span className="flex items-center gap-6 sm:gap-8 shrink-0 pr-6 sm:pr-8">
+              <span className="text-stroke-amber-bold">METHUM CONSTRUCTION</span>
+              <span className="text-amber-400 text-xl sm:text-2xl font-normal">✦</span>
+              <span className="text-white font-extrabold tracking-tight">CIVIL ENGINEERING</span>
+              <span className="text-amber-400 text-xl sm:text-2xl font-normal">✦</span>
+              <span className="text-stroke-amber-bold">CIDA GRADE C7</span>
+              <span className="text-amber-400 text-xl sm:text-2xl font-normal">✦</span>
+              <span className="text-amber-400 font-extrabold tracking-tight">HEAVY PLANT FLEET</span>
+              <span className="text-amber-400 text-xl sm:text-2xl font-normal">✦</span>
+              <span className="text-stroke-amber-bold">BADALKUMBURA</span>
+              <span className="text-amber-400 text-xl sm:text-2xl font-normal">✦</span>
+            </span>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
