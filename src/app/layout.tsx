@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { siteConfig } from "@/data/siteData";
+import SiteIntroLoader from "@/components/SiteIntroLoader";
 
 export const metadata: Metadata = {
   title: `${siteConfig.company.name} | Civil Engineering, Infrastructure & Heavy Equipment`,
@@ -33,6 +34,7 @@ export default function RootLayout({
         <link rel="icon" href="/logo.png" />
       </head>
       <body className="bg-[#070b14] text-slate-100 min-h-screen antialiased selection:bg-amber-500 selection:text-slate-950">
+        <SiteIntroLoader />
         {children}
       </body>
     </html>
