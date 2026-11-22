@@ -15,14 +15,12 @@ export default function Footer() {
             
             {/* Column 1: Brand & Mission */}
             <div className="space-y-4">
-              <Link href="/" className="inline-block">
-                <div className="bg-white px-3 py-1.5 rounded-lg inline-flex items-center shadow-md">
-                  <img
-                    src="/logo.png"
-                    alt="Methum construction"
-                    className="h-10 w-auto object-contain"
-                  />
-                </div>
+              <Link href="/" className="inline-block group py-1">
+                <img
+                  src="/logo-white.png"
+                  alt="Methum construction"
+                  className="h-11 sm:h-12 w-auto object-contain transition duration-200 group-hover:scale-105"
+                />
               </Link>
               
               <p className="text-slate-400 text-sm leading-relaxed">
