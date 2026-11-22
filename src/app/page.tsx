@@ -8,6 +8,7 @@ import MachineryFleet from "@/components/MachineryFleet";
 import QualityHSE from "@/components/QualityHSE";
 import LeadershipAbout from "@/components/LeadershipAbout";
 import QuickEstimator from "@/components/QuickEstimator";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <MachineryFleet />
         <QualityHSE />
         <QuickEstimator />
+        <ContactSection />
       </main>
       <Footer />
     </div>

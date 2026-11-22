@@ -19,7 +19,7 @@ export default function Header() {
     { name: "Projects", href: "/#projects", id: "projects" },
     { name: "Machinery", href: "/#machinery", id: "machinery" },
     { name: "Quality & Safety", href: "/#quality", id: "quality" },
-    { name: "Contact", href: "/contact", id: "contact" },
+    { name: "Contact", href: "/#contact", id: "contact" },
   ];
 
   // Dynamic Route & Scroll-Spy Active Tab Detection
@@ -52,6 +52,7 @@ export default function Header() {
 
         // Check sections from bottom to top of page flow
         const sections = [
+          { id: "contact", name: "Contact" },
           { id: "quality", name: "Quality & Safety" },
           { id: "machinery", name: "Machinery" },
           { id: "projects", name: "Projects" },
