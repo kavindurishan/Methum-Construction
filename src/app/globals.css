@@ -105,4 +105,47 @@ body {
   animation: logo-pulse-glow 3.5s ease-in-out infinite;
 }
 
+/* Nawaloka Style Infinite Vertical Project Tickers */
+@keyframes marquee-vertical-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-vertical-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee-up-1 {
+  animation: marquee-vertical-up 32s linear infinite;
+}
+.animate-marquee-down-1 {
+  animation: marquee-vertical-down 36s linear infinite;
+}
+.animate-marquee-up-2 {
+  animation: marquee-vertical-up 28s linear infinite;
+}
+.animate-marquee-down-2 {
+  animation: marquee-vertical-down 34s linear infinite;
+}
+.animate-marquee-up-3 {
+  animation: marquee-vertical-up 30s linear infinite;
+}
+
+.marquee-group:hover .animate-marquee-up-1,
+.marquee-group:hover .animate-marquee-down-1,
+.marquee-group:hover .animate-marquee-up-2,
+.marquee-group:hover .animate-marquee-down-2,
+.marquee-group:hover .animate-marquee-up-3 {
+  animation-play-state: paused;
+}
+
 

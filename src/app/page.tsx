@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import CidaTrustBar from "@/components/CidaTrustBar";
 import Sectors from "@/components/Sectors";
 import LandmarkProjects from "@/components/LandmarkProjects";
+import LiveExecutionShowcase from "@/components/LiveExecutionShowcase";
 import MachineryFleet from "@/components/MachineryFleet";
 import QualityHSE from "@/components/QualityHSE";
 import LeadershipAbout from "@/components/LeadershipAbout";
@@ -18,6 +19,7 @@ export default function Home() {
         <CidaTrustBar />
         <Sectors />
         <LandmarkProjects />
+        <LiveExecutionShowcase />
         <MachineryFleet />
         <QualityHSE />
         <LeadershipAbout />
