@@ -23,7 +23,7 @@ export default function Hero() {
           {/* Trust Accreditation Pill */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold tracking-wider uppercase backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
-            <span>Premier Civil Engineering Contractor • Sri Lanka</span>
+            <span>{siteConfig.company.cidaGrading} • {siteConfig.company.businessRegistration}</span>
           </div>
 
           {/* Main Headline */}
@@ -34,31 +34,26 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Bilingual Narrative */}
-          <div className="space-y-2">
-            <p className="text-slate-200 text-base sm:text-lg font-normal leading-relaxed drop-shadow-md">
-              Delivering high-capacity expressways, monumental architectural landmarks, and comprehensive heavy equipment fleet mobilization with unmatched engineering precision.
-            </p>
-            <p className="text-amber-400/90 text-sm sm:text-base font-sinhala font-medium drop-shadow">
-              මහාමාර්ග, මහා පරිමාණ ගොඩනැගිලි හා යටිතල පහසුකම් සංවර්ධනය සහ බර යන්ත්‍රෝපකරණ කුලියට දීම / අලෙවිය.
-            </p>
-          </div>
+          {/* Subheading */}
+          <p className="text-slate-200 text-base sm:text-lg font-normal leading-relaxed drop-shadow-md">
+            Specializing in roadway metalling, second-coat bitumen tarring, rigid concrete pavements, institutional facilities, and reliable heavy plant machinery rental and sales.
+          </p>
 
           {/* Action CTAs */}
           <div className="flex flex-wrap items-center gap-4 pt-3">
             <Link
-              href="#sectors"
+              href="/#projects"
               className="px-6 py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs sm:text-sm tracking-wider uppercase rounded-xl shadow-xl shadow-amber-500/25 transition flex items-center gap-2 group"
             >
-              <span>Explore Sectors & Projects</span>
+              <span>Explore Projects & Scope</span>
               <span className="group-hover:translate-x-1 transition">→</span>
             </Link>
 
             <Link
-              href="#machinery"
+              href="/#machinery"
               className="px-6 py-3.5 bg-slate-900/90 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm rounded-xl border border-slate-700/80 backdrop-blur transition flex items-center gap-2"
             >
-              <span>🚜 Heavy Machinery Fleet (Rent / Buy)</span>
+              <span>🚜 Machinery Fleet (Rent / Buy)</span>
             </Link>
           </div>
 
@@ -71,9 +66,6 @@ export default function Hero() {
                 </div>
                 <div className="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">
                   {stat.label}
-                </div>
-                <div className="text-[10px] text-slate-400 font-sinhala">
-                  {stat.sinhala}
                 </div>
               </div>
             ))}

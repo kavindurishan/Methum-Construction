@@ -8,21 +8,19 @@ export default function Sectors() {
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-800 pb-6">
         <div>
-          <div className="text-xs font-bold uppercase tracking-wider text-amber-500 flex items-center gap-2">
-            <span>Engineering Capabilities</span>
-            <span className="text-slate-600">|</span>
-            <span className="font-sinhala text-slate-400 font-normal">මූලික ඉංජිනේරු අංශ</span>
+          <div className="text-xs font-bold uppercase tracking-wider text-amber-500">
+            Engineering Capabilities
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-1">
             Core Operational Sectors
           </h2>
           <p className="text-slate-400 text-sm mt-2 max-w-2xl leading-relaxed">
-            From national arterial expressways to complex commercial landmarks and specialized heavy equipment logistics, Methum Constructions delivers end-to-end civil execution.
+            From regional road metalling and tarring contracts to institutional building infrastructure and heavy plant machinery hire, Methum Constructions delivers end-to-end execution.
           </p>
         </div>
 
         <Link
-          href="#estimator"
+          href="/#estimator"
           className="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1.5 transition self-start md:self-end"
         >
           <span>Request Technical Scope & BOQ</span>
@@ -53,7 +51,7 @@ export default function Sectors() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold text-amber-400 tracking-wider uppercase">
-                    {isMachinery ? "Plant & Equipment" : "Civil Construction"}
+                    {isMachinery ? "Plant & Equipment" : "Civil Works"}
                   </span>
                   <span className="text-3xl">{division.icon}</span>
                 </div>
@@ -62,9 +60,6 @@ export default function Sectors() {
                   <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition">
                     {division.title}
                   </h3>
-                  <p className="text-xs text-amber-400/90 font-sinhala font-medium mt-1">
-                    {division.sinhalaTitle}
-                  </p>
                 </div>
 
                 <p className="text-slate-400 text-xs leading-relaxed">
@@ -85,14 +80,14 @@ export default function Sectors() {
               <div className="pt-6">
                 {isMachinery ? (
                   <Link
-                    href="#machinery"
+                    href="/#machinery"
                     className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 text-xs font-black text-center transition block shadow-lg shadow-amber-500/20"
                   >
-                    Access Live Machinery Fleet (Rent / Sale) →
+                    Access Machinery Fleet (Rent / Sale) →
                   </Link>
                 ) : (
                   <Link
-                    href="#projects"
+                    href="/#projects"
                     className="w-full py-3 rounded-xl bg-slate-900 border border-slate-700/80 hover:bg-amber-500 hover:text-slate-950 hover:border-amber-500 text-slate-200 text-xs font-bold text-center transition block"
                   >
                     View Project Case Studies →

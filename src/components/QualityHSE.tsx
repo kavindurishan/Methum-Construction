@@ -6,21 +6,18 @@ export default function QualityHSE() {
     {
       badge: "ISO 9001:2015",
       title: "Quality Assurance & Material Integrity",
-      sinhalaTitle: "උසස් තත්ත්ව පාලනය හා ද්‍රව්‍ය පරීක්ෂාව",
       icon: "🛡️",
       desc: "Every cubic meter of asphalt, reinforced concrete, and aggregate subbase is laboratory tested. We maintain certified slump tests, cube compressive strength evaluations (25-40 MPa), and bitumen core density checks exceeding RDA standards.",
     },
     {
       badge: "ISO 45001:2018",
       title: "Zero Harm & Jobsite Safety (HSE)",
-      sinhalaTitle: "ශුන්‍ය අනතුරු සහ සේවක ආරක්ෂාව",
       icon: "🦺",
       desc: "Comprehensive safety management across all highway and building sites. Mandatory PPE compliance, daily pre-shift toolbox meetings, crane rigging protocols, and trench shoring ensure zero loss-time injuries.",
     },
     {
       badge: "CIDA Standards",
       title: "National Civil Compliance",
-      sinhalaTitle: "CIDA රාජ්‍ය ඉදිකිරීම් ප්‍රමිතීන්",
       icon: "📜",
       desc: "Adhering to the Construction Industry Development Authority (CIDA) guidelines. Fully certified to undertake public sector highways, bridge rehabilitation, and commercial structures.",
     },
@@ -36,10 +33,7 @@ export default function QualityHSE() {
           Quality, Health, Safety & Environment (HSE)
         </h2>
         <p className="text-slate-400 text-sm">
-          Engineering excellence is built on unyielding safety protocols and standardized quality control.
-        </p>
-        <p className="text-amber-400/90 font-sinhala text-xs font-medium">
-          ජාත්‍යන්තර ISO ප්‍රමිතීන් හා CIDA රෙගුලාසි වලට අනුකූලව ආරක්ෂිතව වැඩ නිමකිරීමේ වගකීම.
+          Engineering excellence built on unyielding safety protocols and standardized quality control adhering to ISO and CIDA standards.
         </p>
       </div>
 
@@ -61,9 +55,6 @@ export default function QualityHSE() {
                 <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition">
                   {pillar.title}
                 </h3>
-                <p className="text-xs text-amber-500/80 font-sinhala font-medium mt-0.5">
-                  {pillar.sinhalaTitle}
-                </p>
               </div>
 
               <p className="text-slate-400 text-xs leading-relaxed">

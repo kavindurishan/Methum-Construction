@@ -1,7 +1,6 @@
 export interface MachineryItem {
   id: string;
   name: string;
-  sinhalaName: string;
   category: "Excavator" | "Roller" | "Backhoe" | "Truck" | "Specialized";
   type: "rent" | "sale" | "both";
   specs: {
@@ -15,7 +14,6 @@ export interface MachineryItem {
   availability: "Available" | "Reserved" | "In-Fleet";
   badge: string;
   icon: string;
-  image?: string;
 }
 
 export interface ProjectItem {
@@ -33,92 +31,84 @@ export interface ProjectItem {
 export const siteConfig = {
   company: {
     name: "Methum Constructions",
-    legalName: "Methum Constructions (Pvt) Ltd",
-    tagline: "Engineering Nation's Vital Infrastructure",
-    sinhalaTagline: "ශක්තිමත් ඉදිකිරීම් හා විශ්වසනීය යන්ත්‍රෝපකරණ සේවාව",
-    establishedYear: "2014",
+    legalName: "Methum Constructions",
+    tagline: "Engineering Excellence & Heavy Plant Solutions",
+    establishedYear: "2023",
     experienceYears: "10+",
-    cidaGrading: "CIDA C1 / CS2 Qualified Equivalent",
+    cidaGrading: "CIDA Registered Contractor (Grade C7)",
+    businessRegistration: "Officially Registered Business (BR)",
     certifications: [
-      "ISO 9001:2015 Quality Management",
-      "ISO 45001:2018 Occupational Health & Safety",
-      "CIDA (ICTAD) Registered Contractor",
+      "CIDA (ICTAD) Registered Contractor - Grade C7",
+      "Officially Registered Business Enterprise",
+      "Conforming to RDA & National Engineering Standards",
     ],
   },
   contacts: {
     headOffice: {
-      title: "Corporate Head Office",
-      sinhalaTitle: "ප්‍රධාන ආයතනික කාර්යාලය",
-      address: "Level 08, Commercial Avenue, Nawam Mawatha, Colombo 02, Sri Lanka",
+      title: "Head Office",
+      address: "222/1, Pansala Road, Badalkumbura, Sri Lanka",
     },
     machineryYard: {
-      title: "Central Plant & Machinery Yard",
-      sinhalaTitle: "ප්‍රධාන යන්ත්‍රෝපකරණ අංගනය හා වැඩබිම",
-      address: "Methum Heavy Yard, Kandy Road, Kadawatha / Kelaniya, Sri Lanka",
+      title: "Plant & Machinery Yard",
+      address: "222/1, Pansala Road, Badalkumbura, Sri Lanka",
     },
-    hotlines: ["+94 11 234 5678", "+94 77 123 4567"],
-    whatsapp: "+94771234567",
-    whatsappDisplay: "+94 77 123 4567",
-    email: "info@methumconstructions.lk",
-    tendersEmail: "tenders@methumconstructions.lk",
+    hotlines: ["055 22 50 610", "0777 26 50 15"],
+    whatsapp: "+94777265015",
+    whatsappDisplay: "0777 26 50 15",
+    email: "methumconstruction@gmail.com",
+    tendersEmail: "methumconstruction@gmail.com",
     workingHours: "Monday - Saturday: 7:30 AM - 6:30 PM (24/7 Site Support)",
   },
   stats: [
-    { label: "CIDA Tier", sinhala: "ප්‍රමිතිය", value: "C1 / CS2" },
-    { label: "Highways & Roads", sinhala: "මාර්ග ඉදිකිරීම්", value: "150+ Km" },
-    { label: "Heavy Machinery", sinhala: "යන්ත්‍ර ඇණිය", value: "50+ Units" },
-    { label: "Projects Completed", sinhala: "නිම කළ ව්‍යාපෘති", value: "200+" },
+    { label: "CIDA Registration", value: "Grade C7" },
+    { label: "Field Experience", value: "10+ Years" },
+    { label: "Heavy Equipment", value: "Fleet Ready" },
+    { label: "Project Delivery", value: "100% On-Time" },
   ],
   leadership: {
-    directorName: "Methum Bandara",
-    title: "Managing Director & CEO",
-    sinhalaTitle: "කළමනාකාර අධ්‍යක්ෂ",
+    directorName: "R.M.P. Rathnayaka",
+    title: "Founder & Proprietor",
     message:
-      "At Methum Constructions, our commitment is simple: delivering uncompromised engineering quality on time, every time. From high-speed asphalt expressways to landmark multi-story complexes and our modern heavy plant machinery fleet, we build foundations that stand the test of time.",
-    sinhalaMessage:
-      "උසස්ම ඉංජිනේරු ප්‍රමිතිය, නියමිත වේලාවට වැඩ නිමකිරීම සහ නවීනතම බර යන්ත්‍රෝපකරණ තාක්ෂණය සමඟින් ශ්‍රී ලංකාවේ ඉදිකිරීම් ක්ෂේත්‍රයේ විශ්වාසනීයම සහකරුවා වීම අපගේ අරමුණයි.",
+      "At Methum Constructions, our core philosophy is grounded in integrity, high-quality civil execution, and dependable machinery support. Backed by more than a decade of hands-on experience in road networks, institutional facilities, and heavy plant operations across the Uva province and beyond, we deliver solid infrastructure that stands the test of time.",
   },
   divisions: [
     {
       id: "roads",
       title: "Highways & Road Infrastructure",
-      sinhalaTitle: "මහාමාර්ග හා කාපට් මාර්ග ඉදිකිරීම්",
       icon: "🛣️",
       description:
-        "Specializing in national and provincial highway construction, asphalt concrete paving, rigid concrete pavements, subbase grading, and stormwater drainage systems adhering to strict RDA standards.",
+        "Specializing in roadway metalling, aggregate subbase grading, second-coat bitumen tarring, rigid concrete pavements, retaining walls, and roadside stormwater drainage conforming to RDA standards.",
       capabilities: [
-        "Asphalt Concrete Laying (Carpet Paving)",
-        "Rigid Cement Concrete Pavement (PCC)",
-        "Road Widening, Culverts & Bridge Works",
-        "Retaining Walls & Soil Compaction",
+        "Aggregate Road Metalling & Base Reconstruction",
+        "Second-Coat Bitumen Tarring & Chip Sealing",
+        "Reinforced Concrete Rigid Road Surfaces",
+        "Slope Retaining Walls & Flood Line Drains",
       ],
     },
     {
       id: "buildings",
-      title: "Building Construction & Turnkey Projects",
-      sinhalaTitle: "වාණිජ, කාර්මික හා සුඛෝපභෝගී ගොඩනැගිලි",
+      title: "Building Construction & Public Facilities",
       icon: "🏢",
       description:
-        "Comprehensive structural and architectural construction for multi-story commercial buildings, luxury residences, industrial warehouses, and institutional complexes with end-to-end turnkey project management.",
+        "Comprehensive civil and architectural construction, public sector upgrades, external reinforced concrete staircases, exterior ACP cladding repairs, residential quarters refurbishment, and institutional facilities.",
       capabilities: [
-        "Commercial Complexes & Multi-Story Buildings",
-        "Luxury Turnkey Residential Villas",
-        "Industrial Logistics Warehouses & Factories",
-        "Structural Engineering & Architectural MEP",
+        "Government Secretariat & Public Buildings",
+        "Exterior Concrete Staircases & Facade Cladding",
+        "Official Quarters & Residential Civil Overhauls",
+        "Architectural Restoration & Pilgrims Complexes",
       ],
     },
     {
       id: "machinery",
       title: "Heavy Equipment Fleet (Rental & Sales)",
-      sinhalaTitle: "බර යන්ත්‍රෝපකරණ කුලියට දීම සහ විකිණීම",
       icon: "🚜",
       description:
-        "Sri Lanka's premier commercial machinery fleet offering heavy earthmoving, compaction, and haulage equipment with certified operators. Available for immediate daily/monthly mobilization or certified pre-owned purchase.",
+        "Reliable heavy equipment rental and sales service offering earthmoving, compaction, and haulage machinery. Available for immediate daily or monthly deployment with certified, experienced operators.",
       capabilities: [
-        "20-Ton Excavators & JCB Backhoe Loaders",
-        "Vibratory Single Drum & Tandem Road Rollers",
-        "Heavy Tipper Trucks (18 CBM) & Water Bowsers",
-        "Instant Dispatch with Experienced Operators",
+        "Excavators & JCB Backhoe Loaders",
+        "Vibratory Single Drum Road Rollers",
+        "Heavy Tipper Trucks & Haulage Transport",
+        "Immediate Site Dispatch with Operators",
       ],
     },
   ],
@@ -126,7 +116,6 @@ export const siteConfig = {
     {
       id: "cat-320d",
       name: "Caterpillar 320D Hydraulic Excavator",
-      sinhalaName: "කැටපිලර් 320D එක්ස්කැවේටර් (20 Ton)",
       category: "Excavator",
       type: "rent",
       specs: {
@@ -142,7 +131,6 @@ export const siteConfig = {
     {
       id: "komatsu-pc200",
       name: "Komatsu PC200-8 Heavy Excavator",
-      sinhalaName: "කොමට්සු PC200 බර එක්ස්කැවේටර්",
       category: "Excavator",
       type: "rent",
       specs: {
@@ -158,7 +146,6 @@ export const siteConfig = {
     {
       id: "sakai-sv512d",
       name: "Sakai SV512D Vibratory Road Roller",
-      sinhalaName: "සකායි 10-ටොන් වයිබ්‍රේටරි රෝලර්",
       category: "Roller",
       type: "rent",
       specs: {
@@ -168,13 +155,12 @@ export const siteConfig = {
       },
       rateOrPrice: "Daily / Monthly Contract",
       availability: "Available",
-      badge: "Asphalt & Soil",
+      badge: "Asphalt & Soil Compaction",
       icon: "🛞",
     },
     {
       id: "jcb-3dx-super",
       name: "JCB 3DX Super 4WD Backhoe Loader",
-      sinhalaName: "ජේසීබී 3DX සුපර් 4WD (කුලියට / විකිණීමට)",
       category: "Backhoe",
       type: "both",
       specs: {
@@ -192,7 +178,6 @@ export const siteConfig = {
     {
       id: "isuzu-giga-tipper",
       name: "Isuzu Giga 10-Wheeler Tipper Truck",
-      sinhalaName: "ඉසුසු ගිගා ටිපර් රථ ඇණිය (18 CBM)",
       category: "Truck",
       type: "rent",
       specs: {
@@ -208,7 +193,6 @@ export const siteConfig = {
     {
       id: "cat-140k-grader",
       name: "Caterpillar 140K Motor Grader",
-      sinhalaName: "කැටපිලර් 140K මෝටර් ග්‍රේඩර්",
       category: "Specialized",
       type: "rent",
       specs: {
@@ -224,7 +208,6 @@ export const siteConfig = {
     {
       id: "bomag-bw211",
       name: "Bomag BW211 D-4 Heavy Soil Compactor",
-      sinhalaName: "බෝමැග් BW211 පාංශු සංයුක්තකාරකය",
       category: "Roller",
       type: "sale",
       specs: {
@@ -242,7 +225,6 @@ export const siteConfig = {
     {
       id: "concrete-boom-pump",
       name: "Sany 37m Truck-Mounted Concrete Pump",
-      sinhalaName: "සානි 37m කොන්ක්‍රීට් බූම් පොම්පය",
       category: "Specialized",
       type: "rent",
       specs: {
@@ -407,32 +389,28 @@ export const siteConfig = {
   ],
   partners: [
     "District Secretariat, Monaragala",
-    "Road Development Authority (RDA)",
     "Provincial Road Development Authority (PRDA - Uva)",
+    "Road Development Authority (RDA)",
     "Construction Industry Development Authority (CIDA)",
     "Urban Development Authority (UDA)",
     "Sacred City Development Project",
   ],
   faqs: [
     {
-      q: "How can I rent heavy machinery from Methum Constructions?",
-      si: "යන්ත්‍රෝපකරණ කුලියට ගන්නේ කෙසේද?",
-      a: "You can click on the 'WhatsApp' button next to any machine in our catalog or call our 24/7 dispatch hotline directly at 077 123 4567. We will confirm machine availability, mobilization transport, and provide an instant quotation.",
+      q: "How can I hire heavy machinery from Methum Constructions?",
+      a: "You can click on the 'WhatsApp' button or call our dispatch hotline directly at 0777 26 50 15 / 055 22 50 610. We will confirm machine availability, transport logistics, and provide an instant quotation.",
     },
     {
-      q: "Do you supply certified operators with your equipment?",
-      si: "යන්ත්‍ර සමඟ පළපුරුදු ඔපරේටර්වරුන් ලබාදෙනවාද?",
-      a: "Yes. All our heavy excavators, road rollers, motor graders, and tipper trucks come with highly experienced, safety-certified operators to guarantee peak jobsite productivity.",
+      q: "Do you supply experienced operators with your equipment?",
+      a: "Yes. All our excavators, road rollers, motor graders, and tipper trucks come with certified, safety-trained operators to ensure peak jobsite productivity and safety.",
     },
     {
       q: "What types of road construction projects do you undertake?",
-      si: "ඔබ භාරගන්නා මාර්ග ඉදිකිරීම් මොනවාද?",
-      a: "We undertake national and provincial asphalt carpet laying, rigid concrete road construction, land development, earthmoving, bridge approaches, culverts, and drainage systems for both government tenders and private developers.",
+      a: "We undertake provincial road metalling, asphalt tarring, concrete road construction, land development, earthworks, retaining walls, and drainage infrastructure for government tenders and private clients.",
     },
     {
       q: "Can you provide a formal Bill of Quantities (BOQ) or Tender Estimate?",
-      si: "ටෙන්ඩර් හෝ ව්‍යාපෘති සඳහා ඇස්තමේන්තු (BOQ) ලබාගත හැකිද?",
-      a: "Certainly. Submit your drawings or project specifications to tenders@methumconstructions.lk or use our rapid quotation desk. Our chartered civil engineers will prepare a comprehensive technical and financial proposal.",
+      a: "Certainly. Submit your project requirements to methumconstruction@gmail.com or via our contact form. Our civil estimating team will prepare a comprehensive proposal.",
     },
   ],
 };

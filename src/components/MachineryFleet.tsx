@@ -28,16 +28,14 @@ export default function MachineryFleet() {
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-800 pb-6">
         <div>
-          <div className="text-xs font-bold uppercase tracking-wider text-amber-500 flex items-center gap-2">
-            <span>Plant & Machinery Division</span>
-            <span className="text-slate-600">|</span>
-            <span className="font-sinhala text-slate-400 font-normal">යන්ත්‍රෝපකරණ අංශය</span>
+          <div className="text-xs font-bold uppercase tracking-wider text-amber-500">
+            Plant & Machinery Division
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-1">
             Certified Equipment Fleet (Rent & Sale)
           </h2>
           <p className="text-slate-400 text-sm mt-2 max-w-2xl">
-            Browse our commercial inventory ready for immediate mobilization across all 9 provinces of Sri Lanka with safety-certified operators.
+            Browse our commercial inventory ready for immediate mobilization across the Uva province and nationwide with safety-certified, experienced operators.
           </p>
         </div>
 
@@ -51,7 +49,7 @@ export default function MachineryFleet() {
                 : "text-slate-300 hover:text-white"
             }`}
           >
-            All Fleet (සියල්ල)
+            All Fleet
           </button>
           <button
             onClick={() => setFilterType("rent")}
@@ -61,7 +59,7 @@ export default function MachineryFleet() {
                 : "text-slate-300 hover:text-white"
             }`}
           >
-            For Rent (කුලියට)
+            For Rent
           </button>
           <button
             onClick={() => setFilterType("sale")}
@@ -71,7 +69,7 @@ export default function MachineryFleet() {
                 : "text-slate-300 hover:text-white"
             }`}
           >
-            For Sale (විකිණීමට)
+            For Sale
           </button>
         </div>
       </div>
@@ -147,9 +145,6 @@ export default function MachineryFleet() {
                   <h4 className="font-bold text-white text-base mt-0.5 group-hover:text-amber-400 transition">
                     {machine.name}
                   </h4>
-                  <p className="text-xs text-amber-500/90 font-sinhala font-medium mt-0.5">
-                    {machine.sinhalaName}
-                  </p>
                 </div>
 
                 {/* Tech Specs Table */}
@@ -184,7 +179,7 @@ export default function MachineryFleet() {
               {/* Bottom Actions */}
               <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs gap-2">
                 <div>
-                  <span className="text-[10px] text-slate-500">Commercial Terms</span>
+                  <span className="text-[10px] text-slate-500">Terms</span>
                   <p className="font-bold text-amber-400 text-xs">
                     {machine.rateOrPrice}
                   </p>
@@ -192,13 +187,13 @@ export default function MachineryFleet() {
 
                 <a
                   href={`https://wa.me/${siteConfig.contacts.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(
-                    `Hello Methum Constructions, I am inquiring about the ${machine.name} (${machine.sinhalaName}) for ${
+                    `Hello Methum Constructions, I am inquiring about the ${machine.name} for ${
                       isSale ? "purchase" : "rental"
                     }. Please share rates and availability.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`px-3 py-2 rounded-lg font-bold text-xs transition flex items-center gap-1.5 shadow ${
+                  className={`px-3.5 py-2 rounded-lg font-bold text-xs transition flex items-center gap-1.5 shadow ${
                     isSale
                       ? "bg-blue-600 hover:bg-blue-500 text-white"
                       : "bg-emerald-600 hover:bg-emerald-500 text-white"
@@ -216,16 +211,16 @@ export default function MachineryFleet() {
       {/* Fleet Yard Banner */}
       <div className="rounded-2xl bg-gradient-to-r from-slate-900 to-[#0b1120] border border-slate-800 p-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-2xl font-bold">
+          <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-2xl font-bold shrink-0">
             📍
           </div>
           <div>
-            <div className="text-white font-bold text-sm">Need to Inspect Machinery in Person?</div>
+            <div className="text-white font-bold text-sm">Machinery Yard & Operations Depot</div>
             <p className="text-slate-400 mt-0.5">
-              Visit our central machinery yard: <strong className="text-slate-200">{siteConfig.contacts.machineryYard.address}</strong>
+              Address: <strong className="text-slate-200">{siteConfig.contacts.machineryYard.address}</strong>
             </p>
-            <p className="text-amber-400/90 font-sinhala mt-0.5 font-medium">
-              යන්ත්‍රෝපකරණ පැමිණ පරීක්ෂා කර බැලීමට අපගේ වැඩබිමට පැමිණෙන්න.
+            <p className="text-slate-500 text-[11px] mt-0.5">
+              Available for live equipment inspection, trial runs, and transport mobilization.
             </p>
           </div>
         </div>
@@ -234,7 +229,7 @@ export default function MachineryFleet() {
           href={`tel:${siteConfig.contacts.hotlines[1].replace(/\s+/g, "")}`}
           className="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold transition whitespace-nowrap"
         >
-          Call Yard Manager: {siteConfig.contacts.hotlines[1]}
+          Call Dispatch: {siteConfig.contacts.hotlines[1]}
         </a>
       </div>
     </section>

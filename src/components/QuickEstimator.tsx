@@ -62,10 +62,6 @@ Please provide an estimated quote and availability.`;
               Need a fast Bill of Quantities (BOQ), tender quote, or instant machinery dispatch? Complete the quick fields, and our engineering desk will respond immediately.
             </p>
 
-            <p className="text-amber-400 font-sinhala text-xs font-medium">
-              ඔබට අවශ්‍ය මාර්ග, ගොඩනැගිලි හෝ මැෂින් කුලියට ගැනීමේ ඇස්තමේන්තුව පහතින් ක්ෂණිකව WhatsApp මඟින් ලබාගන්න.
-            </p>
-
             <div className="pt-4 space-y-3 text-xs text-slate-300 border-t border-slate-800">
               <div className="flex items-center gap-2">
                 <span className="text-emerald-400 font-bold">⚡ Instant:</span>
@@ -106,7 +102,7 @@ Please provide an estimated quote and availability.`;
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-slate-300 font-semibold mb-1">
-                      Required Service (සේවාව)
+                      Required Service
                     </label>
                     <select
                       value={service}
@@ -115,15 +111,15 @@ Please provide an estimated quote and availability.`;
                     >
                       <option>Road Construction (Asphalt / Concrete)</option>
                       <option>Building Construction (Turnkey Commercial/Residential)</option>
-                      <option>Heavy Equipment Rental (දිනපතා / මාසික කුලියට)</option>
-                      <option>Machinery Purchase (යන්ත්‍ර මිලදී ගැනීම)</option>
+                      <option>Heavy Equipment Rental (Daily / Monthly)</option>
+                      <option>Machinery Purchase</option>
                       <option>Bridge, Drainage & Infrastructure Tenders</option>
                     </select>
                   </div>
 
                   <div>
                     <label className="block text-slate-300 font-semibold mb-1">
-                      Machine / Project Scope (යන්ත්‍රය / ප්‍රමාණය)
+                      Machine / Project Scope
                     </label>
                     <select
                       value={equipmentOrScale}
@@ -144,11 +140,11 @@ Please provide an estimated quote and availability.`;
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-slate-300 font-semibold mb-1">
-                      Project Location / District (ප්‍රදේශය)
+                      Project Location / District
                     </label>
                     <input
                       type="text"
-                      placeholder="e.g. Colombo, Kadawatha, Kandy, Galle..."
+                      placeholder="e.g. Monaragala, Badalkumbura, Colombo..."
                       value={location}
                       onChange={(e) => setLocation(e.target.value)}
                       className="w-full bg-[#0a0f1d] border border-slate-700 rounded-lg p-2.5 text-slate-200 focus:outline-none focus:border-amber-400"
@@ -158,7 +154,7 @@ Please provide an estimated quote and availability.`;
 
                   <div>
                     <label className="block text-slate-300 font-semibold mb-1">
-                      Estimated Duration (කාල සීමාව)
+                      Estimated Duration
                     </label>
                     <select
                       value={duration}
@@ -176,7 +172,7 @@ Please provide an estimated quote and availability.`;
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                   <div>
                     <label className="block text-slate-300 font-semibold mb-1">
-                      Your Name / Company (නම / ආයතනය)
+                      Your Name / Company
                     </label>
                     <input
                       type="text"
@@ -190,7 +186,7 @@ Please provide an estimated quote and availability.`;
 
                   <div>
                     <label className="block text-slate-300 font-semibold mb-1">
-                      Contact Phone / WhatsApp (දුරකථන අංකය)
+                      Contact Phone / WhatsApp
                     </label>
                     <input
                       type="tel"
@@ -249,9 +245,6 @@ Please provide an estimated quote and availability.`;
               <h5 className="font-bold text-white text-sm flex items-center gap-2">
                 <span className="text-amber-400">Q:</span> {faq.q}
               </h5>
-              <p className="text-xs text-amber-400/80 font-sinhala font-medium">
-                {faq.si}
-              </p>
               <p className="text-xs text-slate-400 leading-relaxed pt-1">
                 {faq.a}
               </p>

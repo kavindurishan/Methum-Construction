@@ -20,15 +20,15 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm transition-all duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-[68px] flex items-center justify-between gap-4">
         
         {/* CLEAN LOGO ON THE FAR LEFT (NO EMPTY PADDING, SHARP & CRISP) */}
         <Link href="/" className="flex items-center shrink-0 group py-1">
           <div className="relative overflow-hidden transition-all duration-300 ease-out group-hover:scale-105">
             <img
               src="/logo.png"
-              alt="Methum construction"
-              className="h-11 sm:h-13 w-auto object-contain transition duration-200"
+              alt="Methum Constructions"
+              className="h-10 sm:h-12 w-auto object-contain transition duration-200"
             />
             {/* Metallic Sheen Glare Animation */}
             <div className="absolute inset-0 w-2/3 h-full bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none animate-logo-sheen"></div>

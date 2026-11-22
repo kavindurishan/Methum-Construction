@@ -28,7 +28,7 @@ export default function Footer() {
               </p>
 
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
-                <span>CIDA C1 / CS2 Qualified</span>
+                <span>CIDA C7 Registered Contractor</span>
               </div>
             </div>
 

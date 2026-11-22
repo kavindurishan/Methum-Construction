@@ -9,39 +9,39 @@ export default function LeadershipAbout() {
         {/* Left Column: Corporate Legacy */}
         <div className="lg:col-span-6 space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
-            Our Heritage & Vision
+            Our Experience & Vision
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-            A Decade of Building Sri Lanka's Foundations
+            Over a Decade of Solid Civil & Infrastructure Experience
           </h2>
 
           <p className="text-slate-300 text-sm leading-relaxed">
-            Founded with a vision to deliver world-class infrastructure and heavy civil solutions, Methum Constructions has grown into a versatile, high-capability contractor. Combining heavy mechanical plant assets with seasoned chartered civil engineers, we take pride in executing landmark road corridors, structural complexes, and turnkey projects.
+            Registered officially as Methum Constructions, our operations represent more than 10 years of active field experience in civil road contracting, municipal drainage systems, and government building construction across Monaragala and the Uva province.
           </p>
 
-          <p className="text-amber-400 font-sinhala text-xs leading-relaxed font-medium">
-            වසර 10කට අධික කාලයක් පුරා මෙරට මහාමාර්ග හා ගොඩනැගිලි ක්ෂේත්‍රයේ ඉහළම ප්‍රමිතියෙන් වැඩ නිමකරමින්, නවීන බර යන්ත්‍රෝපකරණ ඇණියක් සමඟින් දේශීය ආර්ථිකයට ශක්තියක් වීම අපගේ අභිමානයයි.
+          <p className="text-slate-400 text-xs leading-relaxed">
+            From executing provincial road metalling and second-coat bitumen tarring to upgrading District Secretariat facilities and maintaining an active heavy plant machinery fleet, we deliver high-reliability civil infrastructure conforming to national standards.
           </p>
 
           {/* Core Values Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-800">
             <div className="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-1">
-              <div className="text-amber-400 font-bold text-sm">Precision</div>
-              <p className="text-[11px] text-slate-400">Strict laboratory testing & tolerances.</p>
+              <div className="text-amber-400 font-bold text-sm">Workmanship</div>
+              <p className="text-[11px] text-slate-400">Strict adherence to RDA & CIDA civil specs.</p>
             </div>
             <div className="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-1">
               <div className="text-amber-400 font-bold text-sm">Reliability</div>
-              <p className="text-[11px] text-slate-400">On-time project delivery milestones.</p>
+              <p className="text-[11px] text-slate-400">Proven track record of 100% on-time delivery.</p>
             </div>
             <div className="bg-slate-900/60 p-4 rounded-xl border border-slate-800 space-y-1">
-              <div className="text-amber-400 font-bold text-sm">Self-Reliance</div>
-              <p className="text-[11px] text-slate-400">In-house 50+ heavy machinery fleet.</p>
+              <div className="text-amber-400 font-bold text-sm">Equipment</div>
+              <p className="text-[11px] text-slate-400">In-house plant fleet ready for deployment.</p>
             </div>
           </div>
         </div>
 
-        {/* Right Column: Managing Director's Message */}
+        {/* Right Column: Founder's Message */}
         <div className="lg:col-span-6">
           <div className="bg-gradient-to-br from-[#0f172a] via-[#0a0f1d] to-[#070b14] border border-amber-500/30 rounded-3xl p-8 md:p-10 shadow-2xl relative">
             <div className="text-6xl text-amber-500/20 font-serif leading-none absolute top-6 right-8">
@@ -50,15 +50,11 @@ export default function LeadershipAbout() {
 
             <div className="space-y-4 relative z-10">
               <div className="text-xs font-bold uppercase tracking-wider text-amber-400">
-                Message from Managing Director
+                Message from the Founder
               </div>
 
               <blockquote className="text-slate-200 text-sm md:text-base leading-relaxed italic">
                 "{siteConfig.leadership.message}"
-              </blockquote>
-
-              <blockquote className="text-amber-400/90 font-sinhala text-xs leading-relaxed font-medium">
-                "{siteConfig.leadership.sinhalaMessage}"
               </blockquote>
 
               <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
@@ -66,11 +62,11 @@ export default function LeadershipAbout() {
                   <h4 className="font-extrabold text-white text-base">
                     {siteConfig.leadership.directorName}
                   </h4>
-                  <p className="text-xs text-slate-400">
+                  <p className="text-xs text-amber-400 font-semibold mt-0.5">
                     {siteConfig.leadership.title}
                   </p>
-                  <p className="text-[11px] text-amber-500/90 font-sinhala">
-                    {siteConfig.leadership.sinhalaTitle}
+                  <p className="text-[11px] text-slate-400 mt-0.5">
+                    {siteConfig.company.name} • Badalkumbura
                   </p>
                 </div>
 

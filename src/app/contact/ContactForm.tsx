@@ -206,7 +206,7 @@ export default function ContactForm() {
 
           <div className="space-y-4 text-xs">
             <div className="bg-[#070b14] p-4 rounded-xl border border-slate-800">
-              <div className="text-amber-400 font-bold text-sm">Head Office (Colombo)</div>
+              <div className="text-amber-400 font-bold text-sm">Head Office (Badalkumbura)</div>
               <p className="text-slate-300 mt-1">
                 {siteConfig.contacts.headOffice.address}
               </p>

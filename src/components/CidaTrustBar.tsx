@@ -17,14 +17,11 @@ export default function CidaTrustBar() {
                 {siteConfig.company.cidaGrading}
               </span>
               <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 uppercase tracking-wider">
-                Officially Registered
+                Official Business Registration
               </span>
             </div>
             <p className="text-xs text-slate-300 font-medium mt-0.5">
-              Construction Industry Development Authority (CIDA / Formerly ICTAD) • Sri Lanka
-            </p>
-            <p className="text-[11px] text-amber-400 font-sinhala mt-0.5">
-              ශ්‍රී ලංකා ඉදිකිරීම් කර්මාන්ත සංවර්ධන අධිකාරියේ (CIDA/ICTAD) ලියාපදිංචි ප්‍රමුඛ පෙළේ කොන්ත්‍රාත්කරු.
+              Construction Industry Development Authority (CIDA / ICTAD) • Sri Lanka
             </p>
           </div>
         </div>
@@ -33,17 +30,17 @@ export default function CidaTrustBar() {
         <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-slate-300 font-semibold border-t lg:border-t-0 pt-4 lg:pt-0 border-slate-800 w-full lg:w-auto justify-start lg:justify-end">
           <div className="flex items-center gap-2 bg-slate-900/80 px-3 py-2 rounded-lg border border-slate-800">
             <span className="text-amber-400 font-bold">✓</span>
-            <span>ISO 9001:2015 Quality Certified</span>
+            <span>10+ Years Industry Experience</span>
           </div>
 
           <div className="flex items-center gap-2 bg-slate-900/80 px-3 py-2 rounded-lg border border-slate-800">
             <span className="text-amber-400 font-bold">✓</span>
-            <span>ISO 45001:2018 HSE Safety</span>
+            <span>PRDA & RDA Standard Compliant</span>
           </div>
 
           <div className="flex items-center gap-2 bg-slate-900/80 px-3 py-2 rounded-lg border border-slate-800">
             <span className="text-amber-400 font-bold">✓</span>
-            <span>RDA Civil Standards</span>
+            <span>Government Tender Qualified</span>
           </div>
         </div>
 
