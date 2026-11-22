@@ -119,8 +119,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/10 to-transparent h-12 w-full animate-pulse pointer-events-none z-[1]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 pt-28 pb-16 sm:pt-36 sm:pb-24 w-full flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-        <div className="max-w-2xl xl:max-w-3xl space-y-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 pt-28 pb-16 sm:pt-36 sm:pb-24 w-full">
+        <div className="max-w-3xl space-y-6">
           
           {/* Trust Accreditation Pill */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 text-xs font-bold tracking-wider uppercase backdrop-blur-md">
@@ -173,100 +173,7 @@ export default function Hero() {
             ))}
           </div>
 
-          {/* Mobile / Tablet Video Selector */}
-          <div className="flex lg:hidden items-center justify-between gap-2 pt-2 px-1">
-            <div className="flex items-center gap-1.5 text-[10px] font-mono text-slate-300">
-              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-              <span className="text-amber-400 font-bold">{HERO_PLAYLIST[currentIdx].label}</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              {HERO_PLAYLIST.map((clip, idx) => (
-                <button
-                  key={clip.id}
-                  onClick={() => setCurrentIdx(idx)}
-                  className={`px-2.5 py-1 rounded-md text-[10px] font-mono transition-all ${
-                    currentIdx === idx
-                      ? "bg-amber-500 text-slate-950 font-bold shadow-md shadow-amber-500/30"
-                      : "bg-slate-900/80 text-slate-400 border border-slate-800"
-                  }`}
-                  aria-label={`Jump to ${clip.label}`}
-                >
-                  0{idx + 1}
-                </button>
-              ))}
-            </div>
-          </div>
-
         </div>
-
-        {/* Right-Side Cinematic Video Reel HUD Controller (Desktop) */}
-        <div className="hidden lg:flex flex-col items-end gap-3 self-end pb-4">
-          {/* Active Live Tag */}
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950/85 border border-amber-500/40 backdrop-blur-md shadow-2xl">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-            </span>
-            <span className="text-[10px] font-mono font-bold tracking-widest text-slate-200 uppercase">
-              {HERO_PLAYLIST[currentIdx].tag}
-            </span>
-            <span className="text-[10px] font-mono text-amber-400 font-bold ml-1">
-              • 0{currentIdx + 1} / 0{HERO_PLAYLIST.length}
-            </span>
-          </div>
-
-          {/* Interactive Playlist Switcher */}
-          <div className="p-2.5 rounded-2xl bg-slate-950/90 border border-slate-800/90 backdrop-blur-md shadow-2xl space-y-1.5 w-64">
-            <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider px-2 pt-1 flex justify-between items-center">
-              <span>HEAVY FLEET REEL</span>
-              <span className="text-amber-400/90 font-bold">HD VIDEO</span>
-            </div>
-
-            <div className="space-y-1 pt-1">
-              {HERO_PLAYLIST.map((clip, idx) => {
-                const isSelected = currentIdx === idx;
-                return (
-                  <button
-                    key={clip.id}
-                    onClick={() => setCurrentIdx(idx)}
-                    className={`w-full text-left px-3 py-2 rounded-xl text-xs transition-all flex items-center justify-between group ${
-                      isSelected
-                        ? "bg-amber-500/15 border border-amber-500/50 text-white font-bold shadow-sm"
-                        : "text-slate-400 hover:text-slate-200 hover:bg-slate-900 border border-transparent"
-                    }`}
-                  >
-                    <div className="flex items-center gap-2.5 min-w-0">
-                      <span
-                        className={`text-[10px] font-mono font-bold ${
-                          isSelected ? "text-amber-400" : "text-slate-500 group-hover:text-slate-300"
-                        }`}
-                      >
-                        0{idx + 1}
-                      </span>
-                      <span className="text-xs truncate">{clip.label}</span>
-                    </div>
-                    {isSelected ? (
-                      <span className="flex h-2 w-2 relative shrink-0">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
-                      </span>
-                    ) : (
-                      <span className="text-[10px] text-slate-600 group-hover:text-amber-400 opacity-0 group-hover:opacity-100 transition shrink-0">
-                        ▶
-                      </span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Active clip mini description */}
-            <div className="px-2 pt-1 border-t border-slate-800/70 text-[10px] text-slate-400 truncate">
-              {HERO_PLAYLIST[currentIdx].desc}
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   );
