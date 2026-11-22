@@ -4,24 +4,8 @@ import { siteConfig } from "@/data/siteData";
 export default function LeadershipAbout() {
   return (
     <section id="about" className="relative max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-12 overflow-hidden">
-      {/* Huge Kinetic Outline Typography Marquee in Background */}
-      <div className="absolute inset-0 z-0 flex flex-col justify-around overflow-hidden pointer-events-none select-none opacity-30">
-        {/* Row 1: Leftward drifting kinetic text */}
-        <div className="whitespace-nowrap flex animate-kinetic-left text-6xl sm:text-7xl lg:text-8xl font-black font-mono tracking-widest text-stroke-amber">
-          <span className="shrink-0">METHUM CONSTRUCTION • CIVIL ENGINEERING • ROAD CONTRACTING •&nbsp;</span>
-          <span className="shrink-0">METHUM CONSTRUCTION • CIVIL ENGINEERING • ROAD CONTRACTING •&nbsp;</span>
-        </div>
-
-        {/* Row 2: Rightward drifting kinetic text */}
-        <div className="whitespace-nowrap flex animate-kinetic-right text-6xl sm:text-7xl lg:text-8xl font-black font-mono tracking-widest text-stroke-amber-subtle">
-          <span className="shrink-0">10+ YEARS FIELD EXPERIENCE • CIDA GRADE C7 • BADALKUMBURA SRI LANKA •&nbsp;</span>
-          <span className="shrink-0">10+ YEARS FIELD EXPERIENCE • CIDA GRADE C7 • BADALKUMBURA SRI LANKA •&nbsp;</span>
-        </div>
-      </div>
-
-      {/* Edge Gradient Masks so text smoothly dissolves at borders */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#070b14] via-transparent to-[#070b14] pointer-events-none" />
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#070b14] via-transparent to-[#070b14] pointer-events-none" />
+      {/* Subtle Ambient Radial Glow (Static) */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
