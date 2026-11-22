@@ -77,6 +77,20 @@ export default function Header() {
     }
   }, [pathname]);
 
+  // Handle Navigation Click with Cinematic Transition
+  const handleNavClick = (itemName: string) => {
+    setActiveTab(itemName);
+    setMobileMenuOpen(false);
+
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(
+        new CustomEvent("trigger-intro-transition", {
+          detail: { section: itemName },
+        })
+      );
+    }
+  };
+
   return (
     <header className="fixed top-2.5 sm:top-4 inset-x-0 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto transition-all duration-300">
       {/* Modern Floating Island Capsule Container */}
@@ -88,7 +102,11 @@ export default function Header() {
         }`}
       >
         {/* CLEAN LOGO ON THE FAR LEFT (WEAR INHOUSE ANIMATION STYLE) */}
-        <Link href="/" className="flex flex-col items-start shrink-0 group py-1 relative">
+        <Link
+          href="/"
+          onClick={() => handleNavClick("Home")}
+          className="flex flex-col items-start shrink-0 group py-1 relative"
+        >
           <div className="relative overflow-visible transition-all duration-300 ease-out group-hover:scale-[1.03]">
             {/* Ambient Gold Glow Aura on Hover */}
             <div className="absolute -inset-1.5 bg-amber-500/25 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none -z-10" />
@@ -125,7 +143,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                onClick={() => setActiveTab(item.name)}
+                onClick={() => handleNavClick(item.name)}
                 className={`text-[13px] xl:text-[14px] transition-all duration-200 px-3.5 py-1.5 rounded-full font-medium ${
                   isActive
                     ? "font-bold text-slate-950 bg-amber-500/15 border-b-2 border-amber-500 shadow-xs"
@@ -190,10 +208,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                onClick={() => {
-                  setActiveTab(item.name);
-                  setMobileMenuOpen(false);
-                }}
+                onClick={() => handleNavClick(item.name)}
                 className={`block px-3 py-2 rounded-xl font-medium text-sm transition ${
                   isActive
                     ? "bg-amber-500/10 text-amber-600 font-bold border-l-4 border-amber-500"
