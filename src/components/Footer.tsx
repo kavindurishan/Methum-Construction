@@ -243,29 +243,51 @@ export default function Footer() {
           {/* 5-COLUMN BALANCED CONTENT GRID (YATHRA BUS SYSTEM ARCHITECTURE) */}
           {/* ========================================================== */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 xl:gap-8 pb-10 border-b border-slate-800/80">
-            {/* Column 1: Brand Logo & Verified CIDA Badges */}
+            {/* Column 1: Brand Logo & Verified CIDA Badges (Wear Inhouse Animated Focus) */}
             <div className="space-y-4">
-              <div>
+              <div className="pl-1 sm:pl-3">
                 <Link
                   href="/"
-                  className="inline-flex items-center group overflow-visible"
+                  className="inline-flex flex-col items-start group select-none relative cursor-pointer"
                 >
-                  <img
-                    src="/logo-white.png"
-                    alt="Methum Constructions"
-                    className="h-12 sm:h-14 w-auto filter drop-shadow-sm group-hover:scale-[1.03] transition-transform duration-200"
-                  />
+                  {/* Ambient Golden Glow Aura (Wear Inhouse Style) */}
+                  <div className="absolute -inset-3 bg-gradient-to-r from-amber-500/25 via-amber-400/30 to-yellow-500/20 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none -z-10" />
+
+                  {/* Main Logo Image (Enlarged & Prominently Focused) */}
+                  <div className="relative overflow-hidden rounded-xl p-1.5 bg-slate-950/60 border border-amber-500/30 shadow-xl shadow-amber-950/40 transition-all duration-300 group-hover:scale-[1.04] group-hover:border-amber-400">
+                    <img
+                      src="/logo-white.png"
+                      alt="Methum Constructions"
+                      className="h-16 sm:h-20 w-auto object-contain transition duration-300 animate-logo-glow"
+                    />
+                    {/* Metallic Sheen Glare Animation */}
+                    <div className="absolute inset-0 w-2/3 h-full bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none animate-logo-sheen" />
+                  </div>
+
+                  {/* Futuristic Laser Hairline with Sweep Animation (Wear Inhouse Style) */}
+                  <div className="w-full h-[2px] bg-slate-800/90 mt-2 relative overflow-hidden rounded-full">
+                    <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent via-amber-400 to-transparent animate-laser-sweep" />
+                  </div>
+
+                  {/* Live Status Subtag Indicator */}
+                  <div className="flex items-center gap-1.5 mt-1.5 text-[9px] font-mono tracking-widest text-slate-400 uppercase">
+                    <span className="relative flex h-1.5 w-1.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-amber-400"></span>
+                    </span>
+                    <span className="text-amber-400/90 font-bold">CIVIL INFRASTRUCTURE</span>
+                  </div>
                 </Link>
               </div>
 
-              <p className="text-slate-400 text-xs leading-relaxed">
+              <p className="text-slate-400 text-xs leading-relaxed pl-1 sm:pl-3">
                 Premier civil engineering and heavy infrastructure contractor in
                 Sri Lanka. Delivering high-durability road networks, turnkey
                 commercial buildings, and heavy machinery fleet hire.
               </p>
 
               {/* Accreditation Badge */}
-              <div className="pt-1">
+              <div className="pt-1 pl-1 sm:pl-3">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[11px] font-bold tracking-wider uppercase">
                   <ShieldCheck className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                   <span>{siteConfig.company.cidaGrading}</span>
@@ -568,7 +590,10 @@ export default function Footer() {
                 &copy; {currentYear} {siteConfig.company.legalName}. All Rights
                 Reserved.
               </p>
-              <p className="text-[11px] sm:text-xs text-slate-500 font-normal">
+              <p className="text-[11px] sm:text-xs text-slate-400 font-medium tracking-wide">
+                A Technical Division of KRM Group
+              </p>
+              <p className="text-[10px] sm:text-[11px] text-slate-500 font-normal">
                 {siteConfig.company.cidaGrading} • Business Reg:{" "}
                 {siteConfig.company.businessRegistration}
               </p>

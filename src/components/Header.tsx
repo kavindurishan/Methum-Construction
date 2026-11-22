@@ -22,16 +22,32 @@ export default function Header() {
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm transition-all duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-[68px] flex items-center justify-between gap-4">
         
-        {/* CLEAN LOGO ON THE FAR LEFT (NO EMPTY PADDING, SHARP & CRISP) */}
-        <Link href="/" className="flex items-center shrink-0 group py-1">
-          <div className="relative overflow-hidden transition-all duration-300 ease-out group-hover:scale-105">
-            <img
-              src="/logo.png"
-              alt="Methum Constructions"
-              className="h-10 sm:h-12 w-auto object-contain transition duration-200"
-            />
-            {/* Metallic Sheen Glare Animation */}
-            <div className="absolute inset-0 w-2/3 h-full bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none animate-logo-sheen"></div>
+        {/* CLEAN LOGO ON THE FAR LEFT (WEAR INHOUSE ANIMATION STYLE) */}
+        <Link href="/" className="flex flex-col items-start shrink-0 group py-1 relative">
+          <div className="relative overflow-visible transition-all duration-300 ease-out group-hover:scale-[1.03]">
+            {/* Ambient Gold Glow Aura on Hover (Wear Inhouse Style) */}
+            <div className="absolute -inset-1.5 bg-amber-500/25 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none -z-10" />
+
+            <div className="relative overflow-hidden rounded-md">
+              <img
+                src="/logo.png"
+                alt="Methum Constructions"
+                className="h-10 sm:h-12 w-auto object-contain transition duration-200 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"
+              />
+              {/* Metallic Sheen Glare Animation */}
+              <div className="absolute inset-0 w-2/3 h-full bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none animate-logo-sheen"></div>
+            </div>
+
+            {/* Wear Inhouse Pulsing Status Indicator Dot */}
+            <span className="absolute -top-1 -right-1 flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+            </span>
+          </div>
+
+          {/* Futuristic Laser Hairline with Sweep Animation (Wear Inhouse Style) */}
+          <div className="w-full h-[1.5px] bg-gray-200 mt-1 relative overflow-hidden rounded-full">
+            <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent via-amber-500 to-transparent animate-laser-sweep" />
           </div>
         </Link>
 

@@ -69,6 +69,40 @@ body {
 }
 
 .animate-logo-sheen {
-  animation: logoShine 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: logoShine 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
+
+/* Wear Inhouse Futuristic Laser Sweep Hairline */
+@keyframes laser-sweep {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(260%);
+    opacity: 0;
+  }
+}
+
+.animate-laser-sweep {
+  animation: laser-sweep 3s ease-in-out infinite;
+}
+
+/* Wear Inhouse Ambient Logo Pulse Glow */
+@keyframes logo-pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px rgba(245, 158, 11, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(245, 158, 11, 0.7)) drop-shadow(0 0 25px rgba(245, 158, 11, 0.3));
+  }
+}
+
+.animate-logo-glow {
+  animation: logo-pulse-glow 3.5s ease-in-out infinite;
+}
+
 
