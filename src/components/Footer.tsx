@@ -663,20 +663,6 @@ export default function Footer() {
           </div>
         )}
       </footer>
-
-      {/* Floating 24/7 WhatsApp Action Button */}
-      <a
-        href={`https://wa.me/${siteConfig.contacts.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(
-          "Hello Methum Constructions, I would like to inquire about road/building construction and machinery rental."
-        )}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full font-bold text-xs shadow-2xl shadow-emerald-950/80 hover:scale-105 transition duration-300 border border-emerald-400/40"
-        aria-label="WhatsApp Dispatch"
-      >
-        <MessageSquare className="w-4 h-4" />
-        <span className="hidden sm:inline">WhatsApp Dispatch</span>
-      </a>
     </>
   );
 }
