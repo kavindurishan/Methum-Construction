@@ -24,7 +24,7 @@ export default function QualityHSE() {
   ];
 
   return (
-    <section id="quality" className="max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-10">
+    <section id="quality" className="scroll-mt-28 max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-10">
       <div className="text-center max-w-2xl mx-auto space-y-2">
         <span className="text-xs font-bold uppercase tracking-wider text-amber-500">
           Governance & Compliance

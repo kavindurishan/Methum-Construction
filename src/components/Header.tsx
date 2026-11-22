@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/data/siteData";
@@ -10,6 +10,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("Home");
   const [isScrolled, setIsScrolled] = useState(false);
+  const isClickingRef = useRef(false);
+  const clickTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Logical, sequential order matching the actual flow of the website
   const navItems = [
@@ -22,65 +24,105 @@ export default function Header() {
     { name: "Contact", href: "/#contact", id: "contact" },
   ];
 
-  // Dynamic Route & Scroll-Spy Active Tab Detection
+  // Robust Route & Scroll-Spy Active Tab Detection (BoundingClientRect + Hash + Click Lock)
   useEffect(() => {
     if (pathname === "/contact") {
       setActiveTab("Contact");
       return;
     }
 
-    if (pathname === "/") {
-      // Check current hash on initial load
+    const updateActiveFromHash = () => {
+      if (typeof window === "undefined") return false;
       const hash = window.location.hash.replace("#", "");
       if (hash) {
         const matched = navItems.find((item) => item.id === hash);
-        if (matched) setActiveTab(matched.name);
-      } else if (window.scrollY < 200) {
+        if (matched) {
+          setActiveTab(matched.name);
+          return true;
+        }
+      }
+      return false;
+    };
+
+    // Check hash on initial load
+    updateActiveFromHash();
+
+    // Section list from bottom to top for accurate threshold detection
+    const sectionOrder = [
+      { id: "about", name: "About" },
+      { id: "sectors", name: "Services" },
+      { id: "projects", name: "Projects" },
+      { id: "machinery", name: "Machinery" },
+      { id: "quality", name: "Quality & Safety" },
+      { id: "contact", name: "Contact" },
+    ];
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+
+      // If user recently clicked a nav tab, let the click handler control activeTab during scroll animation
+      if (isClickingRef.current) return;
+
+      // 1. Top of page
+      if (window.scrollY < 200) {
         setActiveTab("Home");
+        return;
       }
 
-      // Smooth scroll spy on homepage sections in order
-      const handleScroll = () => {
-        setIsScrolled(window.scrollY > 40);
+      // 2. Bottom of page (User scrolled to footer or bottom contact)
+      const isAtBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 80;
+      if (isAtBottom) {
+        setActiveTab("Contact");
+        return;
+      }
 
-        const scrollPosition = window.scrollY + 180;
+      // 3. Section in viewport check (top-down from bottom of page)
+      const headerThreshold = 180;
+      let detectedSection = "";
 
-        if (window.scrollY < 250) {
-          setActiveTab("Home");
-          return;
-        }
-
-        // Check sections from bottom to top of page flow
-        const sections = [
-          { id: "contact", name: "Contact" },
-          { id: "quality", name: "Quality & Safety" },
-          { id: "machinery", name: "Machinery" },
-          { id: "projects", name: "Projects" },
-          { id: "sectors", name: "Services" },
-          { id: "about", name: "About" },
-        ];
-
-        for (const section of sections) {
-          const el = document.getElementById(section.id);
-          if (el) {
-            const top = el.offsetTop;
-            if (scrollPosition >= top) {
-              setActiveTab(section.name);
-              break;
-            }
+      for (let i = sectionOrder.length - 1; i >= 0; i--) {
+        const section = sectionOrder[i];
+        const el = document.getElementById(section.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= headerThreshold) {
+            detectedSection = section.name;
+            break;
           }
         }
-      };
+      }
 
-      window.addEventListener("scroll", handleScroll, { passive: true });
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
+      if (detectedSection) {
+        setActiveTab(detectedSection);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("hashchange", updateActiveFromHash);
+
+    // Initial check in case user refreshed mid-page
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("hashchange", updateActiveFromHash);
+      if (clickTimerRef.current) clearTimeout(clickTimerRef.current);
+    };
   }, [pathname]);
 
-  // Handle Navigation Click with Cinematic Transition
+  // Handle Navigation Click with Instant Tab Activation & Cinematic Transition
   const handleNavClick = (itemName: string) => {
     setActiveTab(itemName);
     setMobileMenuOpen(false);
+
+    // Lock scroll-spy for 1000ms while browser executes smooth scroll to section
+    isClickingRef.current = true;
+    if (clickTimerRef.current) clearTimeout(clickTimerRef.current);
+    clickTimerRef.current = setTimeout(() => {
+      isClickingRef.current = false;
+    }, 1000);
 
     if (typeof window !== "undefined") {
       window.dispatchEvent(
@@ -101,7 +143,7 @@ export default function Header() {
             : "bg-white/90 backdrop-blur-lg border-slate-200/80 shadow-lg shadow-slate-950/5"
         }`}
       >
-        {/* CLEAN LOGO ON THE FAR LEFT (WEAR INHOUSE ANIMATION STYLE) */}
+        {/* CLEAN LOGO ON THE FAR LEFT */}
         <Link
           href="/"
           onClick={() => handleNavClick("Home")}
@@ -121,7 +163,7 @@ export default function Header() {
               <div className="absolute inset-0 w-2/3 h-full bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none animate-logo-sheen"></div>
             </div>
 
-            {/* Wear Inhouse Pulsing Status Indicator Dot */}
+            {/* Pulsing Status Indicator Dot */}
             <span className="absolute -top-1 -right-1 flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
@@ -146,8 +188,8 @@ export default function Header() {
                 onClick={() => handleNavClick(item.name)}
                 className={`text-[13px] xl:text-[14px] transition-all duration-200 px-3.5 py-1.5 rounded-full font-medium ${
                   isActive
-                    ? "font-bold text-slate-950 bg-amber-500/15 border-b-2 border-amber-500 shadow-xs"
-                    : "text-slate-600 hover:text-slate-950 hover:bg-slate-100/80 border-b-2 border-transparent"
+                    ? "font-bold text-slate-950 bg-amber-500/20 border border-amber-500/60 shadow-sm"
+                    : "text-slate-600 hover:text-slate-950 hover:bg-slate-100/80 border border-transparent"
                 }`}
               >
                 {item.name}
@@ -211,7 +253,7 @@ export default function Header() {
                 onClick={() => handleNavClick(item.name)}
                 className={`block px-3 py-2 rounded-xl font-medium text-sm transition ${
                   isActive
-                    ? "bg-amber-500/10 text-amber-600 font-bold border-l-4 border-amber-500"
+                    ? "bg-amber-500/15 text-slate-950 font-bold border-l-4 border-amber-500"
                     : "text-gray-700 hover:text-amber-600 hover:bg-gray-50"
                 }`}
               >

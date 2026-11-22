@@ -77,7 +77,7 @@ export default function Hero() {
   }, [currentIdx]);
 
   return (
-    <section className="relative min-h-[660px] lg:min-h-[740px] flex items-center border-b border-slate-800 overflow-hidden">
+    <section id="home" className="relative min-h-[660px] lg:min-h-[740px] flex items-center border-b border-slate-800 overflow-hidden">
       {/* Pattern 1: Hero Cinematic Multi-Video Sequential Playlist */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {HERO_PLAYLIST.map((clip, index) => {

@@ -3,7 +3,7 @@ import { siteConfig } from "@/data/siteData";
 
 export default function LeadershipAbout() {
   return (
-    <section id="about" className="relative max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-12 overflow-hidden">
+    <section id="about" className="scroll-mt-28 relative max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-12 overflow-hidden">
       {/* Subtle Ambient Radial Glow (Static) */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
 

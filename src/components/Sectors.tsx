@@ -4,7 +4,7 @@ import { siteConfig } from "@/data/siteData";
 
 export default function Sectors() {
   return (
-    <section id="sectors" className="relative max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-10 overflow-hidden">
+    <section id="sectors" className="scroll-mt-28 relative max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-10 overflow-hidden">
       {/* Pattern 2: Dynamic CAD Blueprint Grid & Engineering Crosshairs */}
       <div className="absolute inset-0 z-0 bg-cad-grid animate-grid-drift opacity-70 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-[#070b14] via-transparent to-[#070b14]" />

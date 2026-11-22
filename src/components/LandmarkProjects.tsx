@@ -15,7 +15,7 @@ export default function LandmarkProjects() {
       : siteConfig.projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-12">
+    <section id="projects" className="scroll-mt-28 max-w-7xl mx-auto px-4 md:px-8 py-16 space-y-12">
       
       {/* Featured Civil Engineering Showcase Banner */}
       <div className="relative rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl">

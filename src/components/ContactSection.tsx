@@ -6,7 +6,7 @@ import { siteConfig } from "@/data/siteData";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-10 overflow-hidden">
+    <section id="contact" className="scroll-mt-28 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-10 overflow-hidden">
       {/* Ambient Construction Sparks & Glowing Embers (Rich Jobsite Glow Field) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         <div className="civil-spark animate-spark-1" style={{ bottom: "6%", left: "10%", width: 5, height: 5 }} />
