@@ -17,12 +17,12 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <CidaTrustBar />
+        <LeadershipAbout />
         <Sectors />
         <LandmarkProjects />
         <LiveExecutionShowcase />
         <MachineryFleet />
         <QualityHSE />
-        <LeadershipAbout />
         <QuickEstimator />
       </main>
       <Footer />

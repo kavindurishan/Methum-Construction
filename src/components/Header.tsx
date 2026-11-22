@@ -9,13 +9,15 @@ export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("Home");
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  // Logical, sequential order matching the actual flow of the website
   const navItems = [
     { name: "Home", href: "/", id: "" },
     { name: "About", href: "/#about", id: "about" },
     { name: "Services", href: "/#sectors", id: "sectors" },
-    { name: "Machinery", href: "/#machinery", id: "machinery" },
     { name: "Projects", href: "/#projects", id: "projects" },
+    { name: "Machinery", href: "/#machinery", id: "machinery" },
     { name: "Quality & Safety", href: "/#quality", id: "quality" },
     { name: "Contact", href: "/contact", id: "contact" },
   ];
@@ -37,22 +39,24 @@ export default function Header() {
         setActiveTab("Home");
       }
 
-      // Smooth scroll spy on homepage sections
+      // Smooth scroll spy on homepage sections in order
       const handleScroll = () => {
-        const scrollPosition = window.scrollY + 160;
+        setIsScrolled(window.scrollY > 40);
+
+        const scrollPosition = window.scrollY + 180;
 
         if (window.scrollY < 250) {
           setActiveTab("Home");
           return;
         }
 
-        // Check sections from bottom to top
+        // Check sections from bottom to top of page flow
         const sections = [
-          { id: "about", name: "About" },
           { id: "quality", name: "Quality & Safety" },
           { id: "machinery", name: "Machinery" },
           { id: "projects", name: "Projects" },
           { id: "sectors", name: "Services" },
+          { id: "about", name: "About" },
         ];
 
         for (const section of sections) {
@@ -73,20 +77,26 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm transition-all duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-[68px] flex items-center justify-between gap-4">
-        
+    <header className="fixed top-2.5 sm:top-4 inset-x-0 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto transition-all duration-300">
+      {/* Modern Floating Island Capsule Container */}
+      <div
+        className={`w-full transition-all duration-300 rounded-2xl sm:rounded-full border px-4 sm:px-6 h-16 sm:h-[68px] flex items-center justify-between gap-4 ${
+          isScrolled
+            ? "bg-white/95 backdrop-blur-xl border-slate-200/90 shadow-2xl shadow-slate-950/15"
+            : "bg-white/90 backdrop-blur-lg border-slate-200/80 shadow-lg shadow-slate-950/5"
+        }`}
+      >
         {/* CLEAN LOGO ON THE FAR LEFT (WEAR INHOUSE ANIMATION STYLE) */}
         <Link href="/" className="flex flex-col items-start shrink-0 group py-1 relative">
           <div className="relative overflow-visible transition-all duration-300 ease-out group-hover:scale-[1.03]">
-            {/* Ambient Gold Glow Aura on Hover (Wear Inhouse Style) */}
+            {/* Ambient Gold Glow Aura on Hover */}
             <div className="absolute -inset-1.5 bg-amber-500/25 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none -z-10" />
 
             <div className="relative overflow-hidden rounded-md">
               <img
                 src="/logo.png"
                 alt="Methum Constructions"
-                className="h-10 sm:h-12 w-auto object-contain transition duration-200 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"
+                className="h-9 sm:h-11 w-auto object-contain transition duration-200 group-hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.5)]"
               />
               {/* Metallic Sheen Glare Animation */}
               <div className="absolute inset-0 w-2/3 h-full bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none animate-logo-sheen"></div>
@@ -99,14 +109,14 @@ export default function Header() {
             </span>
           </div>
 
-          {/* Futuristic Laser Hairline with Sweep Animation (Wear Inhouse Style) */}
+          {/* Futuristic Laser Hairline with Sweep Animation */}
           <div className="w-full h-[1.5px] bg-gray-200 mt-1 relative overflow-hidden rounded-full">
             <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent via-amber-500 to-transparent animate-laser-sweep" />
           </div>
         </Link>
 
-        {/* CLEAN MINIMALIST NAVIGATION */}
-        <nav className="hidden lg:flex items-center gap-7 xl:gap-8">
+        {/* LOGICAL, STREAMLINED NAVIGATION (CENTERED PILLS) */}
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
           {navItems.map((item) => {
             const isActive = activeTab === item.name;
 
@@ -115,10 +125,10 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setActiveTab(item.name)}
-                className={`text-[14px] transition duration-200 py-1 border-b-2 font-medium ${
+                className={`text-[13px] xl:text-[14px] transition-all duration-200 px-3.5 py-1.5 rounded-full font-medium ${
                   isActive
-                    ? "font-bold text-gray-950 border-amber-500"
-                    : "text-gray-600 hover:text-gray-950 border-transparent hover:border-amber-500"
+                    ? "font-bold text-slate-950 bg-amber-500/15 border-b-2 border-amber-500 shadow-xs"
+                    : "text-slate-600 hover:text-slate-950 hover:bg-slate-100/80 border-b-2 border-transparent"
                 }`}
               >
                 {item.name}
@@ -133,7 +143,7 @@ export default function Header() {
             href={`https://wa.me/${siteConfig.contacts.whatsapp.replace(/\D/g, "")}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-gray-950 text-xs font-bold uppercase tracking-wider transition shadow-sm"
+            className="hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 text-xs font-bold uppercase tracking-wider transition shadow-sm hover:shadow-md"
           >
             <span>Get a Quote</span>
           </a>
@@ -141,7 +151,7 @@ export default function Header() {
           {/* Mobile hamburger button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-gray-600 hover:text-gray-950 border border-gray-300 rounded-lg bg-gray-50"
+            className="lg:hidden p-2 text-gray-700 hover:text-gray-950 border border-gray-300 rounded-xl bg-gray-50/80 hover:bg-gray-100 transition"
             aria-label="Toggle menu"
           >
             <svg
@@ -168,12 +178,11 @@ export default function Header() {
             </svg>
           </button>
         </div>
-
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Modern Floating Mobile Dropdown Capsule */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-gray-200 px-4 py-3 space-y-1.5 shadow-lg">
+        <div className="lg:hidden mt-2 bg-white/98 backdrop-blur-2xl border border-slate-200 rounded-2xl px-4 py-3.5 space-y-1.5 shadow-2xl transition-all duration-200">
           {navItems.map((item) => {
             const isActive = activeTab === item.name;
             return (
@@ -184,7 +193,7 @@ export default function Header() {
                   setActiveTab(item.name);
                   setMobileMenuOpen(false);
                 }}
-                className={`block px-3 py-2 rounded-md font-medium text-sm transition ${
+                className={`block px-3 py-2 rounded-xl font-medium text-sm transition ${
                   isActive
                     ? "bg-amber-500/10 text-amber-600 font-bold border-l-4 border-amber-500"
                     : "text-gray-700 hover:text-amber-600 hover:bg-gray-50"
@@ -199,7 +208,7 @@ export default function Header() {
               href={`https://wa.me/${siteConfig.contacts.whatsapp.replace(/\D/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full text-center py-2.5 bg-amber-500 text-gray-950 rounded-lg font-bold text-xs block uppercase tracking-wider"
+              className="w-full text-center py-2.5 bg-amber-500 text-gray-950 rounded-xl font-bold text-xs block uppercase tracking-wider"
             >
               WhatsApp Dispatch
             </a>

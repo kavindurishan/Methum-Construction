@@ -18,7 +18,7 @@ export default function ContactPage() {
       <main className="flex-grow">
         
         {/* Contact Hero Banner */}
-        <section className="bg-gradient-to-b from-[#0b1220] to-[#070b14] border-b border-slate-800 py-14 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <section className="bg-gradient-to-b from-[#0b1220] to-[#070b14] border-b border-slate-800 pt-28 pb-14 sm:pt-36 sm:pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto space-y-4 text-center sm:text-left">
             
             {/* Breadcrumb */}
