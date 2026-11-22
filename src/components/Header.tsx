@@ -1,22 +1,76 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/data/siteData";
 
 export default function Header() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("Home");
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/#about" },
-    { name: "Services", href: "/#sectors" },
-    { name: "Machinery", href: "/#machinery" },
-    { name: "Projects", href: "/#projects" },
-    { name: "Quality & Safety", href: "/#quality" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "/", id: "" },
+    { name: "About", href: "/#about", id: "about" },
+    { name: "Services", href: "/#sectors", id: "sectors" },
+    { name: "Machinery", href: "/#machinery", id: "machinery" },
+    { name: "Projects", href: "/#projects", id: "projects" },
+    { name: "Quality & Safety", href: "/#quality", id: "quality" },
+    { name: "Contact", href: "/contact", id: "contact" },
   ];
+
+  // Dynamic Route & Scroll-Spy Active Tab Detection
+  useEffect(() => {
+    if (pathname === "/contact") {
+      setActiveTab("Contact");
+      return;
+    }
+
+    if (pathname === "/") {
+      // Check current hash on initial load
+      const hash = window.location.hash.replace("#", "");
+      if (hash) {
+        const matched = navItems.find((item) => item.id === hash);
+        if (matched) setActiveTab(matched.name);
+      } else if (window.scrollY < 200) {
+        setActiveTab("Home");
+      }
+
+      // Smooth scroll spy on homepage sections
+      const handleScroll = () => {
+        const scrollPosition = window.scrollY + 160;
+
+        if (window.scrollY < 250) {
+          setActiveTab("Home");
+          return;
+        }
+
+        // Check sections from bottom to top
+        const sections = [
+          { id: "about", name: "About" },
+          { id: "quality", name: "Quality & Safety" },
+          { id: "machinery", name: "Machinery" },
+          { id: "projects", name: "Projects" },
+          { id: "sectors", name: "Services" },
+        ];
+
+        for (const section of sections) {
+          const el = document.getElementById(section.id);
+          if (el) {
+            const top = el.offsetTop;
+            if (scrollPosition >= top) {
+              setActiveTab(section.name);
+              break;
+            }
+          }
+        }
+      };
+
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [pathname]);
 
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm transition-all duration-200">
@@ -120,19 +174,26 @@ export default function Header() {
       {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-b border-gray-200 px-4 py-3 space-y-1.5 shadow-lg">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              onClick={() => {
-                setActiveTab(item.name);
-                setMobileMenuOpen(false);
-              }}
-              className="block px-3 py-2 text-gray-700 hover:text-amber-600 hover:bg-gray-50 rounded-md font-medium text-sm"
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = activeTab === item.name;
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                onClick={() => {
+                  setActiveTab(item.name);
+                  setMobileMenuOpen(false);
+                }}
+                className={`block px-3 py-2 rounded-md font-medium text-sm transition ${
+                  isActive
+                    ? "bg-amber-500/10 text-amber-600 font-bold border-l-4 border-amber-500"
+                    : "text-gray-700 hover:text-amber-600 hover:bg-gray-50"
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
           <div className="pt-2 border-t border-gray-100">
             <a
               href={`https://wa.me/${siteConfig.contacts.whatsapp.replace(/\D/g, "")}`}
