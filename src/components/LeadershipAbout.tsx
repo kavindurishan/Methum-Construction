@@ -60,30 +60,39 @@ export default function LeadershipAbout() {
                 "{siteConfig.leadership.message}"
               </blockquote>
 
-              <div className="pt-5 border-t border-slate-800/80 flex items-center justify-between gap-4">
-                <div>
-                  <h4 className="font-extrabold text-white text-base sm:text-lg">
+              <div className="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+                <div className="space-y-1">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-[10px] font-bold uppercase tracking-wider mb-1">
+                    <span>★</span>
+                    <span>Executive Leadership</span>
+                  </div>
+                  <h4 className="font-extrabold text-white text-lg sm:text-xl tracking-tight">
                     {siteConfig.leadership.directorName}
                   </h4>
-                  <p className="text-xs sm:text-sm text-amber-400 font-bold mt-0.5">
+                  <p className="text-xs sm:text-sm text-amber-400 font-bold">
                     {siteConfig.leadership.title}
                   </p>
-                  <p className="text-[11px] text-slate-400 mt-1">
-                    {siteConfig.company.name} • Badalkumbura
+                  <p className="text-xs text-slate-400">
+                    {siteConfig.company.name} • Badalkumbura, Monaragala
+                  </p>
+                  <p className="text-[11px] text-slate-500 font-medium">
+                    {siteConfig.company.cidaGrading} • {siteConfig.company.businessRegistration}
                   </p>
                 </div>
 
-                {/* Owner Executive Portrait */}
-                <div className="relative shrink-0">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-amber-500/60 shadow-xl shadow-amber-500/20 bg-slate-900 ring-4 ring-amber-500/10">
+                {/* Owner Executive Portrait - Enlarged with Face Focus */}
+                <div className="relative shrink-0 self-start sm:self-center">
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl overflow-hidden border-2 border-amber-500/70 shadow-2xl shadow-amber-500/25 bg-slate-900 ring-4 ring-amber-500/15 group">
                     <img
                       src={siteConfig.leadership.image}
                       alt={`${siteConfig.leadership.directorName} - Founder & Proprietor`}
-                      className="w-full h-full object-cover object-top hover:scale-105 transition duration-300"
+                      className="w-full h-full object-cover group-hover:scale-[1.45] transition duration-500"
+                      style={{ transform: "scale(1.36)", transformOrigin: "50% 20%" }}
                     />
                   </div>
-                  <div className="absolute -bottom-1 -right-1 px-1.5 py-0.5 rounded-md bg-amber-500 text-slate-950 font-black text-[9px] uppercase tracking-wider shadow border border-slate-900">
-                    FOUNDER
+                  <div className="absolute -bottom-2 -right-2 px-2.5 py-1 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-black text-[10px] uppercase tracking-wider shadow-lg border border-slate-900 flex items-center gap-1">
+                    <span>✓</span>
+                    <span>FOUNDER</span>
                   </div>
                 </div>
               </div>
