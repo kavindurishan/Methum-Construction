@@ -14,6 +14,7 @@ export interface MachineryItem {
   availability: "Available" | "Reserved" | "In-Fleet";
   badge: string;
   icon: string;
+  image?: string;
 }
 
 export interface ProjectItem {
@@ -127,6 +128,7 @@ export const siteConfig = {
       availability: "Available",
       badge: "Fleet Ready",
       icon: "🚜",
+      image: "/machinery/cat-320d.jpg",
     },
     {
       id: "komatsu-pc200",
@@ -142,6 +144,7 @@ export const siteConfig = {
       availability: "Available",
       badge: "High Demand",
       icon: "🚜",
+      image: "/machinery/komatsu-pc200.jpg",
     },
     {
       id: "sakai-sv512d",
@@ -157,6 +160,7 @@ export const siteConfig = {
       availability: "Available",
       badge: "Asphalt & Soil Compaction",
       icon: "🛞",
+      image: "/machinery/sakai-sv512d.jpg",
     },
     {
       id: "jcb-3dx-super",
@@ -174,6 +178,7 @@ export const siteConfig = {
       availability: "Available",
       badge: "For Rent / Sale",
       icon: "🏗️",
+      image: "/machinery/jcb-3dx.jpg",
     },
     {
       id: "isuzu-giga-tipper",
@@ -189,6 +194,7 @@ export const siteConfig = {
       availability: "Available",
       badge: "Aggregate Haulage",
       icon: "🚛",
+      image: "/machinery/isuzu-tipper.jpg",
     },
     {
       id: "cat-140k-grader",
@@ -204,6 +210,7 @@ export const siteConfig = {
       availability: "Reserved",
       badge: "Road Leveling",
       icon: "🚜",
+      image: "/machinery/cat-grader.jpg",
     },
     {
       id: "bomag-bw211",
@@ -221,6 +228,7 @@ export const siteConfig = {
       availability: "Available",
       badge: "FOR SALE",
       icon: "🛞",
+      image: "/machinery/bomag-compactor.jpg",
     },
     {
       id: "concrete-boom-pump",
@@ -236,6 +244,7 @@ export const siteConfig = {
       availability: "Available",
       badge: "High-Rise Ready",
       icon: "🏗️",
+      image: "/machinery/concrete-pump.jpg",
     },
   ],
   projects: [

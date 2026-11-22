@@ -109,16 +109,27 @@ export default function MachineryFleet() {
               }`}
             >
               <div>
-                {/* Visual Icon Container */}
-                <div className="relative rounded-xl overflow-hidden bg-slate-900/90 aspect-video flex items-center justify-center text-5xl border border-slate-800 group-hover:scale-102 transition duration-300">
-                  <span>{machine.icon}</span>
+                {/* Visual Photo Container (Real-World Heavy Fleet Image) */}
+                <div className="relative rounded-xl overflow-hidden bg-slate-900 aspect-video flex items-center justify-center border border-slate-800 group-hover:border-amber-500/50 transition duration-300">
+                  {machine.image ? (
+                    <img
+                      src={machine.image}
+                      alt={machine.name}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
+                    />
+                  ) : (
+                    <span className="text-5xl">{machine.icon}</span>
+                  )}
+
+                  {/* Gradient shadow overlay for badge readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/50 pointer-events-none" />
 
                   {/* Availability Badge */}
                   <span
-                    className={`absolute top-2.5 left-2.5 px-2 py-0.5 rounded text-[10px] font-bold border ${
+                    className={`absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded text-[10px] font-bold border backdrop-blur-md shadow-sm z-10 ${
                       machine.availability === "Available"
-                        ? "bg-emerald-500/20 text-emerald-400 border-emerald-500/30"
-                        : "bg-amber-500/20 text-amber-400 border-amber-500/30"
+                        ? "bg-emerald-500/90 text-white border-emerald-400/50"
+                        : "bg-amber-500/90 text-slate-950 border-amber-400/50"
                     }`}
                   >
                     {machine.availability}
@@ -126,7 +137,7 @@ export default function MachineryFleet() {
 
                   {/* Rent / Sale Tag */}
                   <span
-                    className={`absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded text-[10px] font-black uppercase ${
+                    className={`absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded text-[10px] font-black uppercase shadow-md z-10 ${
                       isSale
                         ? "bg-blue-600 text-white"
                         : isBoth
